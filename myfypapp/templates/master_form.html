@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/> 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan Script" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>TRADEYA!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="{% static '/images/favicon-16x16.png' %}" sizes="16x16">
+<link rel="icon" type="image/png" href="{% static '/images/favicon-32x32.png' %}" sizes="32x32">
+<link rel="icon" type="image/png" href="{% static '/images/favicon-192x192.png' %}" sizes="192x192">
+<link rel="icon" type="image/png" href="{% static '/images/favicon-512x512.png' %}" sizes="512x512">
+
+</head>
+
+<body>
+
+<div id="overlay">
+</div>
+    <!-- Home -->
+
+    <section id="banner">
+        <div>
+            
+            <video id="background-video" autoplay loop muted >
+                <source src="{%static '/images/Web Design-2.mp4'%}" type="video/mp4">
+            </video>
+        </div>
+       
+        
+        
+        <img src="{% static '/images/Tradeya-NEW.png'%}" alt="image not found!" class="logo">
+        <div class="banner-text">
+            <h1>{{name}} your website without diligence</h1>
+            <p>Discover the platform that gives you the freedom to create, design, manage and develop your web presence
+                exactly the way you want.</p>
+            </div>
+        </section >
+    </body>
+
+
+
+
+{% block content %}
+
+
+
+
+{% endblock content %}
+<style>
+#banner{
+    z-index:1 !important;
+    opacity:0.6 !important;
+    background-overlay:black;
+    position:fixed;
+}
+#overlay{
+    background-color:black;
+    position:fixed;
+    opacity:1;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+</style>

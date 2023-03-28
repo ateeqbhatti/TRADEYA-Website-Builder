@@ -1,0 +1,59 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+{% comment %} <div>
+   <tr>
+      <th scope="col">ID#</th>
+      <td>{{contact.id}} </td>
+    </tr>
+    <th scope="col">Name</th>
+    <td>{{contact.name}} </td>
+  </tr>
+  <th scope="col">Email</th>
+  <td>{{contact.email}} </td>
+</tr>
+<th scope="col">Company Name</th>
+<td>{{contact.company_name}} </td>
+</tr>
+<th scope="col">Business Tagline</th>
+<td>{{contact.tagline}} </td>
+</tr>
+<th scope="col">Address</th>
+<td>{{contact.address}} </td>
+</tr>
+</tr>
+<th scope="col">Contact</th>
+<td>{{contact.contact}} </td>
+
+
+</div>           {% endcomment %}
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<table class="table table-bordered ">
+    <thead>
+      <tr>
+        <th scope="col">ID#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Business Tagline</th>
+        <th scope="col">Address</th>
+        <th scope="col">Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>{{contact.id}} </td>
+                <td>{{contact.name}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.company_name}}</td>
+                <td>{{contact.tagline}}</td>
+                <td>{{contact.address}}</td>
+                <td>{{contact.contact}}</td>
+            </tr>
+    </tbody>
+  </table> 
