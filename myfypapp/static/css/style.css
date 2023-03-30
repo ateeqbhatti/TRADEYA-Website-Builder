@@ -405,16 +405,17 @@ form button:hover {
     margin-left: -170px !important;
 }
 
-signupModal{
+#signupModal{
    color: #009688;
 }
 
-span{
+.span2{
     margin-left: -15px !important;
 
     color:black;
 }
 span a{
+    width: auto;
     background-color:black !important;
     color: white !important;
     border-radius: 10px !important;

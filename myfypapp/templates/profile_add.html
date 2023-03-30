@@ -1,0 +1,30 @@
+
+{% extends "master.html" %}
+
+{% block content %}
+  <h1 class="profile_view">ADD Profile</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="{{ user_profile.name }}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" id="phone" value="{{ user_profile.phone }}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="company_name">Company Name</label>
+      <input type="text" name="company_name" id="company_name" value="{{ user_profile.company_name }}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="{{ user_profile.email }}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea name="address" id="address" class="form-control">{{ user_profile.address }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+{% endblock %}

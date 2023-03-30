@@ -53,6 +53,8 @@
     <div class="layers-container"></div>
   </div>
   <div id="gjs" style="height: 100vh; overflow:hidden">
+{% comment "The body of template 1 Starts here" %}{% endcomment %}
+
     `
     <body>
       <div class="isolate bg-white">
@@ -138,7 +140,7 @@
                   <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                       <span class="text-gray-600">
-                        Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                        Announcing our next round of {{ user_profile.name }}. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
                       </span>
                     </div>
                   </div>
@@ -174,6 +176,9 @@
         </div>
   </body>
     `
+
+{% comment "The body of template 1 ends here" %}{% endcomment %}
+
   </div>
     <div class="flex flex-column " id="stylesElements">
       <div class="traits-container" ></div>

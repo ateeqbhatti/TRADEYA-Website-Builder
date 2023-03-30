@@ -29,14 +29,14 @@ def ateeq(request):
 
 def editor(request):
     return render(request,'editor.html')
+
 def main(request):
-    contact_form = ContactForm()
-    context = {'contact_form': contact_form}
-    return render(request, 'main_page/index.html', context)
-    return render(request,'main_page/index.html')
+    return render(request, 'main_page/index.html')
 #rendering template one on click
 def template1(request):
-    return render(request,'editor copy 2.html')
+# remember this, this is the main point that wille be used in templates  rendering
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request,'template1.html', {'user_profile': user_profile})
 
 
 def savePage(request):
@@ -123,6 +123,33 @@ def user_login(request):
             messages.error(request,'Inavlid Credentials')
             return redirect('/')
         
+def user_login2(request):
+    if request.method=='POST':
+        loginusername=request.POST.get('loginusername')
+        loginpass=request.POST.get('loginpass')
+        user=authenticate(username=loginusername, password=loginpass)
+        if user is not None:
+            login(request,user)
+            request.session['loginusername']=loginusername
+            messages.success(request,'Successfully Logged in')
+            return redirect('/editor')
+        else:
+            messages.error(request,'Inavlid Credentials')
+            return redirect('/')
+def user_login3(request):
+    if request.method=='POST':
+        loginusername=request.POST.get('loginusername')
+        loginpass=request.POST.get('loginpass')
+        user=authenticate(username=loginusername, password=loginpass)
+        if user is not None:
+            login(request,user)
+            request.session['loginusername']=loginusername
+            messages.success(request,'Successfully Logged in')
+            return redirect('/profile/add')
+        else:
+            messages.error(request,'Inavlid Credentials')
+            return redirect('/') 
+        
 def user_logout(request):
     logout(request)
     messages.success(request,'Successfully Logged out')
@@ -132,18 +159,24 @@ def changepassword(request):
         pass
 
 
-# def loginpage(request): 
-#     if request.method == 'POST':
-#         loginusername = request.POST.get('loginusername')
-#         loginpass = request.POST.get('loginpass')
-#         user = authenticate(request, username=loginusername, password=loginpass)
-#         if user is not None:
-#             login(request, user)
-#             request.session['loginusername'] = loginusername
-#             messages.success(request, 'Successfully Logged in')
-#             return redirect('/')
-#         else:
-#             messages.error(request, 'Invalid Credentials')
-#             return redirect('/login')
-#     else:
-#         return render(request, 'login.html')
+from .models import UserProfile
+
+@login_required
+def profile_add(request):
+    user_profile = UserProfile.objects.get_or_create(user=request.user)[0]
+    if request.method == 'POST':
+        user_profile.name = request.POST.get('name')
+        user_profile.phone = request.POST.get('phone')
+        user_profile.company_name = request.POST.get('company_name')
+        user_profile.email = request.POST.get('email')
+        user_profile.address = request.POST.get('address')
+        user_profile.save()
+        return redirect('profile')
+    # ok so next task is in the place of  redirect profile i'll redirect user to my offered templates page , after selecting one he'll land in the editor with th key value pairs
+    else:
+        return render(request, 'profile_add.html', {'user_profile': user_profile})
+@login_required
+def profile_view(request):
+    
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request, 'profile_view.html', {'user_profile': user_profile})

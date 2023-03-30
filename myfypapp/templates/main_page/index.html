@@ -64,11 +64,11 @@
                 exactly the way you want.</p>
             <div class="banner-btn">
                 {% if user.is_authenticated %}
-                <a class="btnn" id="auto-generate-btn" href="myapp/forms">Auto Generate</a>
+                <a class="btnn" id="auto-generate-btn" href="profile/add">Auto Generate</a>
                 <a class="btnn" href=" ./editor">Create Yourself </a>
                 {% else %}
-                <a class="btnn" id="auto-generate-btn" href="#loginModal" data-bs-toggle="modal">Auto Generate</a>
-                <a class="btnn" href="#loginModal" data-bs-toggle="modal">Create Yourself </a>
+                <a class="btnn" id="auto-generate-btn" href="#loginModal3" data-bs-toggle="modal">Auto Generate</a>
+                <a class="btnn" href="#loginModal2" data-bs-toggle="modal">Create Yourself </a>
                 {% endif %}
                 <div class="login_u">
 
@@ -125,7 +125,7 @@
                                             data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Create Account</button>
                                     </div>
-                                    <span>Already Have an Account<a href="#loginModal" data-bs-toggle="modal">Login</a></span>
+                                    <span class="span2">Already Have an Account<a href="#loginModal" data-bs-toggle="modal">Login</a></span>
                                 </form>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                                         <button type="button" class="btn btn-primary"
                                             data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Login</button>
-                                        <span>Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
+                                        <span class="span2">Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
                                                 One
                                             </a></span>
                                     </div>
@@ -170,6 +170,83 @@
                     </div>
                 </div>
             </div>
+            
+ 
+
+
+        <div class="modal fade" id="loginModal2" tabindex="-1" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title " id="logintitle">Login for TRADEYA!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action='/login2' method='POST'>
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label class="labell" class="col-form-label">Username:</label>
+                                <input type="text" class="form-control" id="loginusername" name="loginusername"
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label class="labell" class="col-form-label">Password:</label>
+                                <input type="password" class="form-control" id="loginpass" name="loginpass"
+                                    required />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                                <span class="span2">Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
+                                        One
+                                    </a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal3" tabindex="-1" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title " id="logintitle">Login for TRADEYA!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action='/login3' method='POST'>
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="labell" class="col-form-label">Username:</label>
+                        <input type="text" class="form-control" id="loginusername" name="loginusername"
+                            required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="labell" class="col-form-label">Password:</label>
+                        <input type="password" class="form-control" id="loginpass" name="loginpass"
+                            required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <span class="span2">Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
+                                One
+                            </a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
     </section>
     <div id="form-container">
 

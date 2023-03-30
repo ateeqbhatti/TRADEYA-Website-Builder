@@ -4,6 +4,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.auth import views as auth_views
 from .views import contact
 from django.contrib.auth.decorators import login_required
+from .views import profile_add, profile_view
+
 
 urlpatterns = [
     path('forms/data',views.contact_list, name='contact_list'),
@@ -18,8 +20,12 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('signup',views.signup, name='signup'),
     path('login',views.user_login, name='login'),
+    path('login2',views.user_login2, name='login'),
+    path('login3',views.user_login3, name='login'),
     path('logout',views.user_logout, name='login'),
-    # path('loginp',views.loginpage, name='loginpage')
+    path('profile/add/',profile_add, name='profile_add'),
+    path('profile/', profile_view, name='profile'),
+
 
 ]
 
