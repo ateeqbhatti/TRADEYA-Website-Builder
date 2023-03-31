@@ -41,7 +41,7 @@
         </button>
         <ul class="dropdown-menu ">
             <li><a class="dropdown-item" href="/logout">Logout</a></li>
-            <li><a class="dropdown-item" href="#">Change Password</a></li>
+            <li><a class="dropdown-item" href="/change-password">Change Password</a></li>
         </ul>
     </div>
 
@@ -64,7 +64,7 @@
                 exactly the way you want.</p>
             <div class="banner-btn">
                 {% if user.is_authenticated %}
-                <a class="btnn" id="auto-generate-btn" href="profile/add">Auto Generate</a>
+                <a class="btnn" id="auto-generate-btn" href="profile/add/">Auto Generate</a>
                 <a class="btnn" href=" ./editor">Create Yourself </a>
                 {% else %}
                 <a class="btnn" id="auto-generate-btn" href="#loginModal3" data-bs-toggle="modal">Auto Generate</a>
@@ -363,7 +363,6 @@
                     <a href="template1">
                         <h3>Get Started</h3>
                     </a>
-                    <hr>
                     <a href="myapp/editor_test">Customize this template.</a>
                 </div>
             </div>
@@ -372,7 +371,7 @@
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <h3>Get Started</h3>
-                    <hr>
+          
                     <p>Customize this template.</p>
                 </div>
             </div>
@@ -381,7 +380,7 @@
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <h3>Get Started</h3>
-                    <hr>
+                  
                     <p>Customize this template.</p>
                 </div>
             </div>
@@ -390,7 +389,7 @@
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <h3>Get Started</h3>
-                    <hr>
+                  
                     <p>Customize this template.</p>
                 </div>
             </div>

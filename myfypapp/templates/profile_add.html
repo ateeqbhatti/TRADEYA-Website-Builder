@@ -2,7 +2,16 @@
 {% extends "master.html" %}
 
 {% block content %}
-  <h1 class="profile_view">ADD Profile</h1>
+
+<style>
+  .profile_view{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 50px;
+  }
+  </style>
+  <h1 class="profile_view">Enter Your Company's Information</h1>
   <form method="POST">
     {% csrf_token %}
     <div class="form-group">
