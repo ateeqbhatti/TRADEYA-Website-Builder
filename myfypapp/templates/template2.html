@@ -1,0 +1,1630 @@
+{% extends "master.html" %}
+
+
+{% block content %}
+{% load static %}
+<head>
+<title>TRADEYA! - Website Builder</title>
+<style>
+  .parent_builder{
+    display:flex !important;
+  }
+ 
+  .gjs-sm-sector-label{
+    font-weight:bold;
+  }
+
+.gjs-pn-buttons{
+  background-color:white;
+}
+  .gjs-one-bg{
+    color:#009689;
+    background-color:white;
+  }
+.gjs-four-color, .gjs-four-color-h:hover{
+  background-color:#009689;
+  color:white;
+}
+  #blocks {
+    width: 20%;
+    overflow:scroll;
+    height:100vh;
+  }
+  #stylesElements {
+    width: 20%;
+    overflow:scroll;
+    height:100vh;   
+  }
+  #gjs {
+    width: 65%;
+  } 
+ .gjs-pn-panel {
+    position: absolute !important;
+  } 
+ 
+  
+ 
+
+</style>
+</head>
+
+<div class="parent_builder flex justify-between items-start">
+  
+  <div id="blocks" class="">
+    <div class="layers-container"></div>
+  </div>
+  <div id="gjs" style="height: 100vh; overflow:hidden">
+{% comment "The body of template 1 Starts here" %}{% endcomment %}
+
+    
+   <body>
+
+     <!-- -------------- Main Section -------------->
+
+     <section class="header">
+      <nav>
+          <a href="index.html"><img src={% static '/images/logo3.png' %}></a>
+
+      <!-- nav bar -->
+          <div class="nav-links" id="navLinks">
+              <i class="fa fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="">HOME</a></li>
+                  <li><a href="">ABOUT</a></li>
+                  <li><a href="">COURSE</a></li>
+                  <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <!-- nav bar -->
+
+      <div class="text-box">
+          <h1>World's Biggest University</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quis sint doloremque, sequi pariatur <br> odio architecto maiores magnam quasi, iste sapiente nesciunt recusandae Voluptatum</p>
+          <a href="" class="hero-button">Visit Us To Know More</a>
+      </div>
+
+  </section>
+
+  <!-- -------------- Main Section ---------------->
+
+
+
+
+  <!-- -------------- Courses ---------------->
+
+  <section class="course">
+
+      <h1>Courses We Offer</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, suscipit.</p>
+
+      <div class="row">
+          <div class="course-col">
+              <h3>Intermediate</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+              </p>
+          </div>
+          <div class="course-col">
+              <h3>Degree</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+              </p>
+          </div>
+          <div class="course-col">
+              <h3>Post Graduation</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+              </p>
+          </div>
+      </div>
+
+
+  </section>
+
+  <!-- -------------- Courses -------------->
+  
+  
+  
+  
+  <!-- -------------- Campus -------------->
+
+  <section class="campus">
+      <h1>Our Global Campus</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate deleniti adipisci labore officiis molestiae.</p>
+
+      <div class="row">
+          <div class="campus-col">
+              <img src={% static '/images/london.png' %}>
+              <div class="layer">
+                  <h3>Lahore</h3>
+              </div>
+          </div>
+          <div class="campus-col">
+              <img src= {% static '/images/newyork.png' %}>
+              <div class="layer">
+                  <h3>Islamabad</h3>
+              </div>
+          </div>
+          <div class="campus-col">
+              <img src= {% static '/images/washington.png' %}>
+              <div class="layer">
+                  <h3>Karachi</h3>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- -------------- Campus -------------->
+  
+
+
+
+  <!-- -------------- Facilities -------------->
+
+  <section class="facilities">
+      <h1>Our Facilities</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
+
+      <div class="row">
+          <div class="facilities-col">
+              <img src= {% static '/images/library.png' %}>
+              <h3>World Class Library</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
+          </div>
+          <div class="facilities-col">
+              <img src={% static '/images/basketball.png' %}>
+              <h3>Largest Play Ground</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
+          </div>
+          <div class="facilities-col">
+              <img src={% static '/images/cafeteria.png' %}>
+              <h3>Tasty and Healthy Food</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- -------------- Facilities -------------->
+
+
+
+
+
+  <!-- -------------- Testimonials -------------->
+
+      <section class="testimonials">
+          <h1>What Our Students Say</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
+
+          <div class="row">
+              <div class="testimonials-col">
+                  <img src={% static 'images/user1.jpg' %}>
+                  <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
+                      <h3>Christene Berlin</h3>
+                  </div>
+              </div>
+              <div class="testimonials-col">
+                  <img src={% static 'images/user2.jpg' %}>
+                  <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
+                      <h3>David Byer</h3>
+                  </div>
+              </div>
+              
+          </div>
+      </section>
+
+  <!-- -------------- Testimonials -------------->
+
+
+
+
+  <!-- -------------- Call To Action -------------->
+
+      <section class="cta">
+          <h1>Enroll For Our Various Online Courses <br> Anywhere From The World </h1>
+          <a href="" class="hero-button">CONTACT US</a>
+      </section>
+
+  <!-- -------------- Call To Action -------------->
+
+
+
+
+  <!-- -------------- Footer -------------->
+
+      <section class="footer">
+          <h4>About Us</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>   Itaque possimus impedit ad, sit harum quisquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam officiis eligendi mollitia voluptate harum ratione..</p>
+          <p class="p-tradeya">Made by TRADEYA</p>
+      </section>
+
+  <!-- -------------- Footer -------------->
+
+  
+
+
+
+
+
+
+
+<!-- JavaScript for toggle Menu -->
+
+  <script>
+
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu(){
+          navLinks.style.right = "0";
+      }
+
+      function hideMenu(){
+          navLinks.style.right = "-200px";
+      }
+
+  </script>
+<!-- JavaScript for toggle Menu -->
+
+
+<style>
+
+  .clearfix{ clear:both}
+  .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url( {% static '/images/banner.png' %});
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* Nav bar */
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav .fa{
+    display: none;
+}
+@media (max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2 ;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff ;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.hero-button:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+
+}
+/* Main Section*/
+
+
+
+
+/* Section Courses */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/* Section Courses */
+
+
+
+
+
+/* Section Campus */
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/* Section Campus */
+
+
+
+
+
+
+/* Section Facilities */
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col p{
+    width: 100%;
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+/* Section Facilities */
+
+
+
+
+
+
+/* Section Testimonials */
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3 ;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50px;    
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+@media(max-width: 700px){
+    .testimonials-col img{
+        
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+/* Section Testimonials */
+
+
+
+
+
+
+/* Section Call To Action*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url( {% static '/images/banner2.jpg' %} );
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+/* Section Call To Action*/
+
+
+
+
+
+/* Footer */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #90a4d1;
+}
+.footer h4{
+    margin-bottom: 25px;
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.footer p{
+    font-size: 16px;
+    color: black;
+}
+.p-tradeya{
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+/* Footer */
+
+
+</style>
+    
+
+
+
+
+
+
+
+
+
+    
+
+{% comment "The body of template 1 ends here" %}{% endcomment %}
+
+  </div>
+    <div class="flex flex-column " id="stylesElements">
+      <div class="traits-container" ></div>
+      <div class="styles-container"></div>
+      <div id="stylemanager" class=""></div>
+    </div>
+ 
+</div>
+<script defer>
+  const editor = grapesjs.init({
+    
+    // Indicate where to init the editor. You can also pass an HTMLElement
+    container: "#gjs",
+    // Get the content for the canvas directly from the element
+    // As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
+    fromElement: true,
+ 
+    // Size of the editor
+    // Disable the storage manager for the moment
+    storageManager: false,
+    layerManager: {
+      appendTo: ".layers-container",
+    },
+    traitManager: {
+      appendTo: ".traits-container",
+    },
+
+    selectorManager: {
+      appendTo: '.styles-container'
+    },
+
+      styleManager: {
+        appendTo: "#stylemanager",
+        sectors: [{
+            name: 'General',
+            properties:[
+              {
+                extend: 'float',
+                type: 'radio',
+                default: 'none',
+                options: [
+                  { value: 'none', className: 'fa fa-times'},
+                  { value: 'left', className: 'fa fa-align-left'},
+                  { value: 'right', className: 'fa fa-align-right'}
+                ],
+              },
+              'display',
+              { extend: 'position', type: 'select' },
+              'top',
+              'right',
+              'left',
+              'bottom',
+            ],
+          }, {
+              name: 'Dimension',
+              open: false,
+              properties: [
+                'width',
+                {
+                  id: 'flex-width',
+                  type: 'integer',
+                  name: 'Width',
+                  units: ['px', '%'],
+                  property: 'flex-basis',
+                  toRequire: 1,
+                },
+                'height',
+                'max-width',
+                'min-height',
+                'margin',
+                'padding'
+              ],
+            },{
+              name: 'Typography',
+              open: false,
+              properties: [
+                  'font-family',
+                  'font-size',
+                  'font-weight',
+                  'letter-spacing',
+                  'color',
+                  'line-height',
+                  {
+                    extend: 'text-align',
+                    options: [
+                      { id : 'left',  label : 'Left',    className: 'fa fa-align-left'},
+                      { id : 'center',  label : 'Center',  className: 'fa fa-align-center' },
+                      { id : 'right',   label : 'Right',   className: 'fa fa-align-right'},
+                      { id : 'justify', label : 'Justify',   className: 'fa fa-align-justify'}
+                    ],
+                  },
+                  {
+                    property: 'text-decoration',
+                    type: 'radio',
+                    default: 'none',
+                    options: [
+                      { id: 'none', label: 'None', className: 'fa fa-times'},
+                      { id: 'underline', label: 'underline', className: 'fa fa-underline' },
+                      { id: 'line-through', label: 'Line-through', className: 'fa fa-strikethrough'}
+                    ],
+                  },
+                  'text-shadow'
+              ],
+            },{
+              name: 'Decorations',
+              open: false,
+              properties: [
+                'opacity',
+                'border-radius',
+                'border',
+                'box-shadow',
+                'background', // { id: 'background-bg', property: 'background', type: 'bg' }
+              ],
+            },{
+              name: 'Extra',
+              open: false,
+              buildProps: [
+                'transition',
+                'perspective',
+                'transform'
+              ],
+            },{
+              name: 'Flex',
+              open: false,
+              properties: [{
+                name: 'Flex Container',
+                property: 'display',
+                type: 'select',
+                defaults: 'block',
+                list: [
+                  { value: 'block', name: 'Disable'},
+                  { value: 'flex', name: 'Enable'}
+                ],
+              },{
+                name: 'Flex Parent',
+                property: 'label-parent-flex',
+                type: 'integer',
+              },{
+                name: 'Direction',
+                property: 'flex-direction',
+                type: 'radio',
+                defaults: 'row',
+                list: [{
+                  value: 'row',
+                  name: 'Row',
+                  className: 'icons-flex icon-dir-row',
+                  title: 'Row',
+                },{
+                  value: 'row-reverse',
+                  name: 'Row reverse',
+                  className: 'icons-flex icon-dir-row-rev',
+                  title: 'Row reverse',
+                },{
+                  value: 'column',
+                  name: 'Column',
+                  title: 'Column',
+                  className: 'icons-flex icon-dir-col',
+                },{
+                  value: 'column-reverse',
+                  name: 'Column reverse',
+                  title: 'Column reverse',
+                  className: 'icons-flex icon-dir-col-rev',
+                }],
+              },{
+                name: 'Justify',
+                property: 'justify-content',
+                type: 'radio',
+                defaults: 'flex-start',
+                list: [{
+                  value: 'flex-start',
+                  className: 'icons-flex icon-just-start',
+                  title: 'Start',
+                },{
+                  value: 'flex-end',
+                  title: 'End',
+                  className: 'icons-flex icon-just-end',
+                },{
+                  value: 'space-between',
+                  title: 'Space between',
+                  className: 'icons-flex icon-just-sp-bet',
+                },{
+                  value: 'space-around',
+                  title: 'Space around',
+                  className: 'icons-flex icon-just-sp-ar',
+                },{
+                  value: 'center',
+                  title: 'Center',
+                  className: 'icons-flex icon-just-sp-cent',
+                }],
+              },{
+                name: 'Align',
+                property: 'align-items',
+                type: 'radio',
+                defaults: 'center',
+                list: [{
+                  value: 'flex-start',
+                  title: 'Start',
+                  className: 'icons-flex icon-al-start',
+                },{
+                  value: 'flex-end',
+                  title: 'End',
+                  className: 'icons-flex icon-al-end',
+                },{
+                  value: 'stretch',
+                  title: 'Stretch',
+                  className: 'icons-flex icon-al-str',
+                },{
+                  value: 'center',
+                  title: 'Center',
+                  className: 'icons-flex icon-al-center',
+                }],
+              },{
+                name: 'Flex Children',
+                property: 'label-parent-flex',
+                type: 'integer',
+              },{
+                name: 'Order',
+                property: 'order',
+                type: 'integer',
+                defaults: 0,
+                min: 0
+              },{
+                name: 'Flex',
+                property: 'flex',
+                type: 'composite',
+                properties  : [{
+                  name: 'Grow',
+                  property: 'flex-grow',
+                  type: 'integer',
+                  defaults: 0,
+                  min: 0
+                },{
+                  name: 'Shrink',
+                  property: 'flex-shrink',
+                  type: 'integer',
+                  defaults: 0,
+                  min: 0
+                },{
+                  name: 'Basis',
+                  property: 'flex-basis',
+                  type: 'integer',
+                  units: ['px','%',''],
+                  unit: '',
+                  defaults: 'auto',
+                }],
+              },{
+                name: 'Align',
+                property: 'align-self',
+                type: 'radio',
+                defaults: 'auto',
+                list: [{
+                  value: 'auto',
+                  name: 'Auto',
+                },{
+                  value: 'flex-start',
+                  title: 'Start',
+                  className: 'icons-flex icon-al-start',
+                },{
+                  value   : 'flex-end',
+                  title: 'End',
+                  className: 'icons-flex icon-al-end',
+                },{
+                  value   : 'stretch',
+                  title: 'Stretch',
+                  className: 'icons-flex icon-al-str',
+                },{
+                  value   : 'center',
+                  title: 'Center',
+                  className: 'icons-flex icon-al-center',
+                }],
+              }]
+            }
+          ],
+      },
+
+      plugins:[
+      'gjs-blocks-basic',
+      'grapesjs-plugin-forms',
+      'grapesjs-blocks-bootstrap4',
+      'grapesjs-component-countdown',
+      'grapesjs-plugin-export',
+      'grapesjs-tabs',
+      'grapesjs-custom-code',
+      'grapesjs-touch',
+      'grapesjs-parser-postcss',
+      'grapesjs-tooltip',
+      'grapesjs-tui-image-editor',
+      'grapesjs-style-bg',
+      'grapesjs-preset-webpage',
+      ],
+    
+    blockManager: {
+      appendTo: "#blocks",
+      blocks: [
+        
+        
+        {
+          media: `<svg style="width:48px;height:48px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+            </svg>`,
+          id : 'form-1',
+          label: 'Form 1',
+          attributes : { class: ''},
+          content :`
+          <section class="flex flex-col md:flex-row h-screen items-center">
+          
+            <div class="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+              <img src="https://source.unsplash.com/random" alt="" class="w-full h-full object-cover">
+            </div>
+          
+            <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+                  flex items-center justify-center">
+          
+              <div class="w-full h-100">
+          
+          
+                <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
+          
+                <form class="mt-6" action="#" method="POST">
+                  <div>
+                    <label class="block text-gray-700">Email Address</label>
+                    <input type="email" name="" id="" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                  </div>
+          
+                  <div class="mt-4">
+                    <label class="block text-gray-700">Password</label>
+                    <input type="password" name="" id="" placeholder="Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                          focus:bg-white focus:outline-none" required>
+                  </div>
+          
+                  <div class="text-right mt-2">
+                    <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
+                  </div>
+          
+                  <button type="submit" class="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
+                        px-4 py-3 mt-6">Log In</button>
+                </form>
+          
+                <hr class="my-6 border-gray-300 w-full">
+          
+                <button type="button" class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
+                      <div class="flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"/><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"/><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"/><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"/></svg>
+                      <span class="ml-4">
+                      Log in
+                      with
+                      Google</span>
+                      </div>
+                    </button>
+          
+                <p class="mt-8">Need an account? <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Create an
+                        account</a></p>
+          
+          
+              </div>
+            </div>
+          
+          </section>
+          `
+        },
+        {
+          media: `<svg style="width:48px;height:48px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+            </svg>`,
+          id: 'form2',
+          label :'Form-2',
+          attributes : { class: ''},
+          content : `
+          <body>
+            <div class="isolate bg-white">
+                <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+                  <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                    <defs>
+                      <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9089FC"></stop>
+                        <stop offset="1" stop-color="#FF80B5"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="px-6 pt-6 lg:px-8">
+                  
+                      <div class="flex lg:hidden">
+                        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                          <span class="sr-only">Open main menu</span>
+                          <!-- Heroicon name: outline/bars-3 -->
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
+                        <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Product</a>
+              
+                        <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Features</a>
+              
+                        <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Marketplace</a>
+              
+                        <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Company</a>
+                      </div>
+                      <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+                        <a href="#" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
+                      </div>
+                    </nav>
+                    <!-- Mobile menu, show/hide based on menu open state. -->
+                    <div role="dialog" aria-modal="true">
+                      <div focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+                        <div class="flex h-9 items-center justify-between">
+                          <div class="flex">
+                            <a href="#" class="-m-1.5 p-1.5">
+                              <span class="sr-only">Your Company</span>
+                              <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                            </a>
+                          </div>
+                          <div class="flex">
+                            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                              <span class="sr-only">Close menu</span>
+                              <!-- Heroicon name: outline/x-mark -->
+                              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mt-6 flow-root">
+                          <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Product</a>
+              
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Features</a>
+              
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Marketplace</a>
+              
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Company</a>
+                            </div>
+                            <div class="py-6">
+                              <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log in</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <main>
+                  <div class="relative px-6 lg:px-8">
+                    <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+                      <div>
+                        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                          <div class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <span class="text-gray-600">
+                              Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">Data to enrich your online business</h1>
+                          <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                          <div class="mt-8 flex gap-x-4 sm:justify-center">
+                            <a href="#" class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
+                              Get started
+                              <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
+                            </a>
+                            <a href="#" class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                              Live demo
+                              <span class="text-gray-400" aria-hidden="true">&rarr;</span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                          <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                            <defs>
+                              <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9089FC"></stop>
+                                <stop offset="1" stop-color="#FF80B5"></stop>
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+        </body>
+          `
+        },
+        {
+          id: 'temp1',
+          label :'Temp1',
+          attributes : { class: ''},
+          media: `<svg style="width:48px;height:48px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+            </svg>`,
+  
+          content : `
+                                         <span class="sr-only">Your Company</span>
+                              <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                            </a>
+                          </div>
+                          <div class="flex">
+                            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                              <span class="sr-only">Close menu</span>
+                              <!-- Heroicon name: outline/x-mark -->
+                              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mt-6 flow-root">
+                          <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Product</a>
+              
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Features</a>
+              
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Marketplace</a>
+              
+                              <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Company</a>
+                            </div>
+                            <div class="py-6">
+                              <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log in</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <main>
+                  <div class="relative px-6 lg:px-8">
+                    <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+                      <div>
+                        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                          <!-- <div class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <span class="text-gray-600">
+                              Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                            </span>
+                          </div> -->
+                        </div>
+                        <div>
+                          <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">Start Building Your Website!</h1>
+                          <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                          <div class="mt-8 flex gap-x-4 sm:justify-center">
+                            <a href="#" class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
+                              Get started
+                              <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
+                            </a>
+                            <a href="#" class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                              Learn More
+                              <span class="text-gray-400" aria-hidden="true">&rarr;</span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                          <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                            <defs>
+                              <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9089FC"></stop>
+                                <stop offset="1" stop-color="#FF80B5"></stop>
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+              <!-- Header -->
+        
+        
+        
+              <!-- Services -->
+              <div class="bg-white py-24 sm:py-32 lg:py-10">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div class="sm:text-center">
+                    <h2 class="text-lg font-semibold leading-8 text-indigo-600">Services</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Enter Your Text Here</p>
+                    <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+                  </div>
+              
+                  <div class="mt-20 max-w-lg sm:mx-auto md:max-w-none">
+                    <div class="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+                      <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+                          <!-- Heroicon name: outline/globe-alt -->
+                          <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                          </svg>
+                        </div>
+                        <div class="sm:min-w-0 sm:flex-1">
+                          <p class="text-lg font-semibold leading-8 text-gray-900">Competitive exchange rates</p>
+                          <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+                        </div>
+                      </div>
+              
+                      <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+                          <!-- Heroicon name: outline/scale -->
+                          <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+                          </svg>
+                        </div>
+                        <div class="sm:min-w-0 sm:flex-1">
+                          <p class="text-lg font-semibold leading-8 text-gray-900">No hidden fees</p>
+                          <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+                        </div>
+                      </div>
+              
+                      <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+                          <!-- Heroicon name: outline/bolt -->
+                          <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                          </svg>
+                        </div>
+                        <div class="sm:min-w-0 sm:flex-1">
+                          <p class="text-lg font-semibold leading-8 text-gray-900">Transfers are instant</p>
+                          <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+                        </div>
+                      </div>
+              
+                      <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+                          <!-- Heroicon name: outline/device-phone-mobile -->
+                          <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                          </svg>
+                        </div>
+                        <div class="sm:min-w-0 sm:flex-1">
+                          <p class="text-lg font-semibold leading-8 text-gray-900">Mobile notifications</p>
+                          <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Services -->
+        
+        
+        
+              <!-- Items List -->
+              <div class="bg-white">
+                <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                  <h2 class="sr-only">Products</h2>
+              
+                  <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                    <a href="#" class="group">
+                      <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                      </div>
+                      <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
+                      <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+                    </a>
+              
+                    <a href="#" class="group">
+                      <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                      </div>
+                      <h3 class="mt-4 text-sm text-gray-700">Nomad Tumbler</h3>
+                      <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+                    </a>
+              
+                    <a href="#" class="group">
+                      <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                      </div>
+                      <h3 class="mt-4 text-sm text-gray-700">Focus Paper Refill</h3>
+                      <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
+                    </a>
+              
+                    <a href="#" class="group">
+                      <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                      </div>
+                      <h3 class="mt-4 text-sm text-gray-700">Machined Mechanical Pencil</h3>
+                      <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+                    </a>
+              
+                    <!-- More products... -->
+                  </div>
+                </div>
+              </div>
+              <!-- Item List -->
+        
+        
+        
+              <!-- Also Purchased -->
+              <div class="bg-white">
+                <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                  <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+              
+                  <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    <div class="group relative">
+                      <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                        <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                      </div>
+                      <div class="mt-4 flex justify-between">
+                        <div>
+                          <h3 class="text-sm text-gray-700">
+                            <a href="#">
+                              <span aria-hidden="true" class="absolute inset-0"></span>
+                              Basic Tee
+                            </a>
+                          </h3>
+                          <p class="mt-1 text-sm text-gray-500">Black</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$35</p>
+                      </div>
+                    </div>
+              
+                    <!-- More products... -->
+                  </div>
+                </div>
+              </div>
+              <!-- Also Perchased -->
+        
+        
+        
+              <!-- Start of section 3 -->
+        
+              <!-- End of section 3 -->
+        
+        
+             
+        
+              <!-- Ready to dive in -->
+              <div class="bg-gray-50">
+                <div class="mx-auto max-w-7xl py-12 px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+                  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <span class="block">Ready to dive in?</span>
+                    <span class="block text-indigo-600">Start your free trial today.</span>
+                  </h2>
+                  <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                    <div class="inline-flex rounded-md shadow">
+                      <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get started</a>
+                    </div>
+                    <div class="ml-3 inline-flex rounded-md shadow">
+                      <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50">Learn more</a>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <!-- Ready to dive in  -->
+        
+        
+               <!-- Sign up Form -->
+               <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+                <div class="w-full max-w-md space-y-8">
+                  <div>
+                    <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                    <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+                    <!-- <p class="mt-2 text-center text-sm text-gray-600">
+                      Or
+                      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">start your 14-day free trial</a>
+                    </p> -->
+                  </div>
+                  <form class="mt-8 space-y-6" action="#" method="POST">
+                    <input type="hidden" name="remember" value="true">
+                    <div class="-space-y-px rounded-md shadow-sm">
+                      <div>
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address">
+                      </div>
+                      <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password">
+                      </div>
+                    </div>
+              
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                      </div>
+              
+                      <div class="text-sm">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+                      </div>
+                    </div>
+              
+                    <div>
+                      <button type="submit" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                          <!-- Heroicon name: mini/lock-closed -->
+                          <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                        Sign in
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Sign up Form -->
+              
+        
+              <!-- Footer -->
+              <footer class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Tradeya™</a>. All Rights Reserved.
+                </span>
+                <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </footer>`
+        }
+      ],
+    },
+    canvas :{
+      styles:[
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
+      ],
+      scripts:[
+      'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js',
+      'https://cdn.tailwindcss.com'
+      ]
+    }
+  });
+  const id = "{{ page.id }}";
+  if(id){
+    const html = `{{ page.html|safe }}`
+    const css = `{{ page.css|safe }}`
+    editor.setComponents(html)
+    editor.setStyle(css)
+  }
+  editor.Panels.addPanel({
+    id: "panel-top",
+    el: ".panel__top",
+  });
+  editor.Panels.addPanel({
+    id: "basic-actions",
+    el: ".panel__basic-actions",
+    buttons: [
+      {
+        id: "visibility",
+        active: true, // active by default
+        className: "btn-toggle-borders",
+        label: "<u>B</u>",
+        command: "sw-visibility", // Built-in command
+      },
+      {
+        id: "export",
+        className: "btn-open-export",
+        label: "Exp",
+        command: "export-template",
+        context: "export-template", // For grouping context of buttons from the same panel
+      },
+      {
+        id: "show-json",
+        className: "btn-show-json",
+        label: "JSON",
+        context: "show-json",
+        command(editor) {
+          editor.Modal.setTitle("Components JSON")
+            .setContent(
+              `<textarea style="width:100%; height: 250px;">
+                    ${JSON.stringify(editor.getComponents())}
+                </textarea>`
+            )
+            .open();
+        },
+      },
+    ],
+  });
+  editor.on("run:export-template:before", (opts) => {
+    console.log("Before the command run");
+    if (0 /* some condition */) {
+      opts.abort = 1;
+    }
+  });
+  editor.on("run:export-template", () => console.log("After the command run"));
+  editor.on("abort:export-template", () => console.log("Command aborted"));
+  editor.Commands.add("show-layers", {
+    getRowEl(editor) {
+      return editor.getContainer().closest(".editor-row");
+    },
+    getLayersEl(row) {
+      return row.querySelector(".layers-container");
+    },
+
+    run(editor, sender) {
+      const lmEl = this.getLayersEl(this.getRowEl(editor));
+      lmEl.style.display = "";
+    },
+    stop(editor, sender) {
+      const lmEl = this.getLayersEl(this.getRowEl(editor));
+      lmEl.style.display = "none";
+    },
+  });
+  editor.Commands.add("show-styles", {
+    getRowEl(editor) {
+      return editor.getContainer().closest(".editor-row");
+    },
+    getStyleEl(row) {
+      return row.querySelector(".styles-container");
+    },
+
+    run(editor, sender) {
+      const smEl = this.getStyleEl(this.getRowEl(editor));
+      smEl.style.display = "";
+    },
+    stop(editor, sender) {
+      const smEl = this.getStyleEl(this.getRowEl(editor));
+      smEl.style.display = "none";
+    },
+  });
+  editor.Commands.add("show-traits", {
+    getTraitsEl(editor) {
+      const row = editor.getContainer().closest(".editor-row");
+      return row.querySelector(".traits-container");
+    },
+    run(editor, sender) {
+      this.getTraitsEl(editor).style.display = "";
+    },
+    stop(editor, sender) {
+      this.getTraitsEl(editor).style.display = "none";
+    },
+  });
+  editor.Commands.add("set-device-desktop", {
+    run: (editor) => editor.setDevice("Desktop"),
+  });
+  editor.Commands.add("set-device-mobile", {
+    run: (editor) => editor.setDevice("Mobile"),
+  });
+  var pn = editor.Panels;
+  var modal = editor.Modal;
+  var cmdm = editor.Commands;
+
+  // Update canvas-clear command
+  cmdm.add('canvas-clear', function() {
+    if(confirm('Are you sure to clean the canvas?')) {
+      editor.runCommand('core:canvas-clear')
+      setTimeout(function(){ localStorage.clear()}, 0)
+    }
+  });
+  editor.Commands.add('canvas-clear', function() {
+    if(confirm('Are you sure to clean the canvas?')) {
+      editor.runCommand('core:canvas-clear')
+      setTimeout(function(){ localStorage.clear()}, 0)
+    }
+  });
+  function saveContent(e){
+    e.preventDefault()
+    console.log(editor.getHtml(), editor.getCss());
+    const id = "{{ page.id }}"
+    const formData = new FormData()
+    formData.append('html', editor.getHtml());
+    formData.append('css', editor.getCss());
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const url = id ? `/editPage/${id}` : 'page/create';
+    const request = new Request(
+    url,
+      {
+          method: 'POST',
+          headers: {'X-CSRFToken': csrftoken},
+          mode: 'same-origin', // Do not send CSRF token to another domain.
+          body: formData
+      }
+    );
+    fetch(request).then((resp)=>resp.json()).then((response)=>{
+      console.log(response)
+      alert('page saved successfully')
+    }).catch((error)=>{
+      console.log(error)
+      alert('Error')
+    })
+  } 
+
+  
+</script>
+</body>
+{% endblock content %}
