@@ -157,58 +157,39 @@ def password_changed(request):
 
 from .models import UserProfile
 
-# @login_required
-# def profile_add(request):
-#     user_profile = UserProfile.objects.get_or_create(user=request.user)[0]
-#     if request.method == 'POST':
-#         user_profile.name = request.POST.get('name')
-#         user_profile.phone = request.POST.get('phone')
-#         user_profile.company_name = request.POST.get('company_name')
-#         user_profile.email = request.POST.get('email')
-#         user_profile.address = request.POST.get('address')
-#         user_profile.save()
-#         return redirect('template_view')
-#     # ok so next task is in the place of  redirect profile i'll redirect user to my offered templates page , after selecting one he'll land in the editor with th key value pairs
-#     else:
-#         return render(request, 'profile_add.html', {'user_profile': user_profile})
-from django.core.files.storage import default_storage
 @login_required
-
 def profile_add(request):
     user_profile = UserProfile.objects.get_or_create(user=request.user)[0]
     if request.method == 'POST':
         user_profile.name = request.POST.get('name')
         user_profile.phone = request.POST.get('phone')
         user_profile.company_name = request.POST.get('company_name')
-        user_profile.address = request.POST.get('address')
-        if request.FILES.get('logo'):
-            logo = request.FILES['logo']
-            filename = f"logo/{request.user.username}/{logo.name}"
-            default_storage.save(filename, logo)
-            user_profile.logo = logo
-            print(f"Logo saved to user profile: {user_profile.logo}")
+        user_profile.email = request.POST.get('email')
+        user_profile.address=request.POST.get('address')
+        user_profile.category = request.POST.get('category')
         user_profile.save()
-        return redirect('template1')
+        return redirect('template2')
+    # ok so next task is in the place of  redirect profile i'll redirect user to my offered templates page , after selecting one he'll land in the editor with th key value pairs
     else:
         return render(request, 'profile_add.html', {'user_profile': user_profile})
 
 
-
-
-
 @login_required
-def profile_view(request):
-    
+def profile_view(request):    
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request, 'profile_view.html', {'user_profile': user_profile})
+
 def template_view(request):
     return render(request,'templates_view.html')
+
 def editor_demo(request):
     return render(request,'template1 copy.html')
+
 def template1(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request,'template1.html', {'user_profile': user_profile})
+
 def template2(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
