@@ -36,7 +36,9 @@ urlpatterns = [
          success_url='/password-changed/'), name='password_change'),
     path('password-changed/', views.password_changed, name='password_changed'),
     path('template2',views.template2,name='template2'),
+    path('template3',views.template3,name='template3'),
     path('template1',views.template1,name='template1'),
+    path('template4',views.template4,name='template4'),
     path('editor_demo',views.editor_demo)
 
 ]

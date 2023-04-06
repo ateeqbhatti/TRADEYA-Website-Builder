@@ -194,3 +194,13 @@ def template2(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request,'template2.html', {'user_profile': user_profile})
+
+def template3(request):
+# remember this, this is the main point that wille be used in templates  render
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request,'template3.html', {'user_profile': user_profile})
+
+def template4(request):
+# remember this, this is the main point that wille be used in templates  render
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request,'template4.html', {'user_profile': user_profile})

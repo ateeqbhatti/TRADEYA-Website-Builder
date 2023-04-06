@@ -59,567 +59,731 @@
     
    <body>
 
-     <!-- -------------- Main Section -------------->
+    <header>
+      <!-- <a href="#" class="logo"><img src="image/logo.png" alt=""></a> -->
+      <a href="index.html" class="logo">
+      <h2>  {{ user_profile.company_name }}</h2>
+      </a>
 
-     <section class="header">
-      <nav>
-        <a href="index.html">
-        <h1> {{ user_profile.company_name }} </h1>
-        </a>
-      <!-- nav bar -->
-          <div class="nav-links" id="navLinks">
-              <i class="fa fa-times" onclick="hideMenu()"></i>
-              <ul>
-                  <li><a href="">HOME</a></li>
-                  <li><a href="">ABOUT</a></li>
-                  <li><a href="">COURSE</a></li>
-                  <li><a href="">CONTACT</a></li>
-              </ul>
-          </div>
-          <i class="fa fa-bars" onclick="showMenu()"></i>
-      </nav>
-      <!-- nav bar -->
+      <ul class="navmenu">
+          <li><a href="#">home</a></li>
+          <li><a href="#">shop</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="#">page</a></li>
+          <li><a href="#">Docs</a></li>
+      </ul>
 
-      <div class="text-box">
-          <h1>Enter Your Text Here</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quis sint doloremque, sequi pariatur <br> odio architecto maiores magnam quasi, iste sapiente nesciunt recusandae Voluptatum</p>
-          <a href="" class="hero-button">Visit Us To Know More</a>
+      <div class="nav-icon">
+          <a href="#"><i class='bx bx-search'></i></a>
+          <a href="#"><i class='bx bx-user' ></i></a>
+          <a href="#"><i class='bx bx-cart' ></i></a>
+
+          <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+  </header>
+
+  <section class="main-home">
+      <div class="main-text">
+          <h5>Winter Collection</h5>
+          <h1>New Winter <br> Collection 2022</h1>
+          <p>There's Nothing like Trend</p>
+
+          <a href="#" class="main-btn">Shop Now <i class='bx bx-right-arrow-alt' ></i></a>
       </div>
 
+      <div class="down-arrow">
+          <a href="#trending" class="down"><i class='bx bx-down-arrow-alt' ></i></a>
+      </div>
   </section>
 
-  <!-- -------------- Main Section ---------------->
-
-
-
-
-  <!-- -------------- Courses ---------------->
-
-  <section class="course">
-
-      <h1>Courses We Offer</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, suscipit.</p>
-
-      <div class="row">
-          <div class="course-col">
-              <h3>Intermediate</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
-              </p>
-          </div>
-          <div class="course-col">
-              <h3>Degree</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
-              </p>
-          </div>
-          <div class="course-col">
-              <h3>Post Graduation</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
-              </p>
-          </div>
+  <!-- trending-products-section -->
+  <section class="trending-product" id="trending">
+      <div class="center-text">
+          <h2>Our Trending <span>products</span></h2>
       </div>
 
+      <div class="products">
+          <div class="row">
+              <!-- <img src="image/1.jpg" alt=""> -->
+              <img src="{% static '/images/1.jpg'%}" alt="">
+              <div class="product-text">
+                  <h5>Sale</h5>
+              </div>
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
 
-  </section>
-
-  <!-- -------------- Courses -------------->
-  
-  
-  
-  
-  <!-- -------------- Campus -------------->
-
-  <section class="campus">
-      <h1>Our Global Campus</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate deleniti adipisci labore officiis molestiae.</p>
-
-      <div class="row">
-          <div class="campus-col">
-              <img src={% static '/images/london.png' %}>
-              <div class="layer">
-                  <h3>Lahore</h3>
+              <div class="price">
+                  <h4>Half Running Set</h4>
+                  <p>$99 - $129</p>
               </div>
           </div>
-          <div class="campus-col">
-              <img src= {% static '/images/newyork.png' %}>
-              <div class="layer">
-                  <h3>Islamabad</h3>
-              </div>
-          </div>
-          <div class="campus-col">
-              <img src= {% static '/images/washington.png' %}>
-              <div class="layer">
-                  <h3>Karachi</h3>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- -------------- Campus -------------->
-  
-
-
-
-  <!-- -------------- Facilities -------------->
-
-  <section class="facilities">
-      <h1>Our Facilities</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
-
-      <div class="row">
-          <div class="facilities-col">
-              <img src= {% static '/images/library.png' %}>
-              <h3>World Class Library</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
-          </div>
-          <div class="facilities-col">
-              <img src={% static '/images/basketball.png' %}>
-              <h3>Largest Play Ground</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
-          </div>
-          <div class="facilities-col">
-              <img src={% static '/images/cafeteria.png' %}>
-              <h3>Tasty and Healthy Food</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
-          </div>
-      </div>
-  </section>
-
-  <!-- -------------- Facilities -------------->
-
-
-
-
-
-  <!-- -------------- Testimonials -------------->
-
-      <section class="testimonials">
-          <h1>What Our Students Say</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
 
           <div class="row">
-              <div class="testimonials-col">
-                  <img src={% static 'images/user1.jpg' %}>
-                  <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
-                      <h3>Christene Berlin</h3>
-                  </div>
+              <!-- <img src="image/2.jpg" alt=""> -->
+              <img src="{% static '/images/2.jpg'%}" alt="">
+              <div class="product-text">
+                  <h5>New</h5>
               </div>
-              <div class="testimonials-col">
-                  <img src={% static 'images/user2.jpg' %}>
-                  <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
-                      <h3>David Byer</h3>
-                  </div>
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
               </div>
-              
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Formal Men Lowers</h4>
+                  <p>$99 - $129</p>
+              </div>
           </div>
-      </section>
 
-  <!-- -------------- Testimonials -------------->
+          <div class="row">
+              <!-- <img src="image/3.jpg" alt=""> -->
+              <img src="{% static '/images/3.jpg'%}" alt="">
+
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Half Running Suit</h4>
+                  <p>$99 - $129</p>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- <img src="image/4.jpg" alt=""> -->
+              <img src="{% static '/images/4.jpg'%}" alt="">
+              <div class="product-text">
+                  <h5>Hot</h5>
+              </div>
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Half Fancy Lady Dress</h4>
+                  <p>$99 - $129</p>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- <img src="image/5.jpg" alt=""> -->
+              <img src="{% static '/images/5.jpg'%}" alt="">
+
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Flix Flox Jeans</h4>
+                  <p>$99 - $129</p>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- <img src="image/6.jpg" alt=""> -->
+              <img src="{% static '/images/6.jpg'%}" alt="">
+              <div class="product-text">
+                  <h5>Hot</h5>
+              </div>
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Fancy Salwar Suits</h4>
+                  <p>$99 - $129</p>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- <img src="image/7.jpg" alt=""> -->
+              <img src="{% static '/images/7.jpg'%}" alt="">
+              <div class="product-text">
+                  <h5>Sale</h5>
+              </div>
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Printed Straight Kurta</h4>
+                  <p>$99 - $129</p>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- <img src="image/8.jpg" alt=""> -->
+              <img src="{% static '/images/8.jpg'%}" alt="">
+              <div class="product-text">
+                  <h5>Sale</h5>
+              </div>
+              <div class="heart-icon">
+                  <i class='bx bx-heart'></i>
+              </div>
+              <div class="ratting">
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bx-star'></i>
+                  <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                  <h4>Collot Full Dress</h4>
+                  <p>$99 - $129</p>
+              </div>
+          </div>
+      </div>
+
+  </section>
+
+  <!-- Client-Review-section -->
+
+  <section class="client-reviews">
+      <div class="reviews">
+          <h3>Client Reviews</h3>
+          <!-- <img src="image/team-1.jpg" alt=""> -->
+          <img src="{% static '/images/team-1.jpg'%}" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna <br>
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis <br>
+              aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+              <h2>Mark Jevenue</h2>
+              <p>CEO of Addle</p>
+      </div>
+  </section>
+
+  <!-- update-news-section -->
+  <section class="Update-news">
+      <div class="up-center-text">
+          <h2>New Updates</h2>
+      </div>
+
+      <div class="update-cart">
+          <div class="cart">
+              <!-- <img src="image/bl-1.png" alt=""> -->
+              <img src="{% static '/images/bl-1.png'%}" alt="">
+              <h5>26 jan 2022</h5>
+              <h4>Let's Start bring sale on this summer vacation.</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+
+              <h6>Continue Reading..</h6>
+          </div>
+
+          <div class="cart">
+              <!-- <img src="image/bl-2.png" alt=""> -->
+              <img src="{% static '/images/bl-2.png'%}" alt="">
+              <h5>26 jan 2022</h5>
+              <h4>Let's Start bring sale on this summer vacation.</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+
+              <h6>Continue Reading..</h6>
+          </div>
+
+          <div class="cart">
+              <!-- <img src="image/bl-3.png" alt=""> -->
+              <img src="{% static '/images/bl-3.png'%}" alt="">
+              <h5>26 jan 2022</h5>
+              <h4>Let's Start bring sale on this summer vacation.</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+
+              <h6>Continue Reading..</h6>
+          </div>
+      </div>
+  </section>
+
+  <!-- contact-section -->
+  <section class="contact">
+      <div class="contact-info">
+          <div class="first-info">
+              <!-- <img src="image/logo.png" alt=""> -->
+              <img src="{% static '/images/logo.png'%}" alt="">
+
+              <p>3245 Grant Street Longview, <br> TX united kingdom 765378</p>
+              <p>01601348732</p>
+              <p>saidulahmed3080@gmail.com</p>
+
+              <div class="social-icon">
+                  <a href="#"><i class='bx bxl-facebook'></i></a>
+                  <a href="#"><i class='bx bxl-twitter' ></i></a>
+                  <a href="#"><i class='bx bxl-instagram' ></i></a>
+                  <a href="#"><i class='bx bxl-youtube' ></i></a>
+                  <a href="#"><i class='bx bxl-linkedin' ></i></a>
+              </div>
+          </div>
+
+          <div class="second-info">
+              <h4>Support</h4>
+              <p>Contact us</p>
+              <p>About page</p>
+              <p>Size Guide</p>
+              <p>Shopping & Resturns</p>
+              <p>Privacy</p>
+          </div>
+
+          <div class="third-info">
+              <h4>Shop</h4>
+              <p>Men's Shopping</p>
+              <p>Women's Shopping</p>
+              <p>Kids's Shopping</p>
+              <p>Furniture</p>
+              <p>Discount</p>
+          </div>
+
+          <div class="fourth-info">
+              <h4>Company</h4>
+              <p>About</p>
+              <p>Blog</p>
+              <p>Affiliate</p>
+              <p>Login</p>
+          </div>
+
+          <div class="five">
+              <h4>Subscribe</h4>
+              <p>Receive Updates, Hot Deals, Discounts Sent Straight In Your Inbox Daily</p>
+              <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Eum, Debitis.</p>
+              <p>Receive Updates, Hot Deals, Discounts Sent Straight In Your Inbox Daily</p>
+          </div>
+      </div>
+  </section>
+
+  <div class="end-text">
+      <p>Copyright © @2022. All Rights Reserved.Designd By TRADEYA.</p>
+  </div>
+
+ 
 
 
-
-
-  <!-- -------------- Call To Action -------------->
-
-      <section class="cta">
-          <h1>Enroll For Our Various Online Courses <br> Anywhere From The World </h1>
-          <a href="" class="hero-button">CONTACT US</a>
-      </section>
-
-  <!-- -------------- Call To Action -------------->
-
-
-
-
-  <!-- -------------- Footer -------------->
-
-      <section class="footer">
-          <h4>About Us</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>   Itaque possimus impedit ad, sit harum quisquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam officiis eligendi mollitia voluptate harum ratione..</p>
-          <p class="p-tradeya">Made by TRADEYA</p>
-      </section>
-
-  <!-- -------------- Footer -------------->
-
-  
-
-
-
-
-
-
-
-<!-- JavaScript for toggle Menu -->
-
+  <!-- Javascript -->
   <script>
+      const header = document.querySelector("header");
 
-      var navLinks = document.getElementById("navLinks");
+  window.addEventListener ("scroll", function(){
+  header.classList.toggle ("sticky", this.window.scrollY > 0);
+  })
 
-      function showMenu(){
-          navLinks.style.right = "0";
-      }
+  let menu = document.querySelector('#menu-icon');
+  let navmenu = document.querySelector('.navmenu');
 
-      function hideMenu(){
-          navLinks.style.right = "-200px";
-      }
-
+  menu.onclick = () => {
+  menu.classList.toggle('bx-x');
+  navmenu.classList.toggle('open');
+  }
   </script>
-<!-- JavaScript for toggle Menu -->
-
+  <!-- Javascript -->
 
 <style>
 
   .clearfix{ clear:both}
-  .header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://source.unsplash.com/1020x600/?{{user_profile.address}});
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
 }
-/* Nav bar */
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
+.logo img{
+  max-width: 120px;
+  height: auto;
 }
-nav img{
-    width: 150px;
+.navmenu{
+  display: flex;
 }
-.nav-links{
-    flex: 1;
-    text-align: right;
+.navmenu a{
+  color: #2c2c2c;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all .42s ease;
 }
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
+.navmenu a:hover{
+  color: #EE1C47;
 }
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-    
+.nav-icon{
+  display: flex;
+  align-items: center;
 }
-.nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+.nav-icon i{
+  margin-right: 20px;
+  color: #2c2c2c;
+  font-size: 25px;
+  font-weight: 400;
+  transition: all .42s ease;
 }
-.nav-links ul li:hover::after{
-    width: 100%;
+.nav-icon i:hover{
+  transform: scale(1.1);
+  color: #EE1C47;
 }
-nav .fa{
-    display: none;
+#menu-icon{
+  font-size: 35px;
+  color: #2c2c2c;
+  z-index: 10001;
+  cursor: pointer;
 }
-@media (max-width: 700px){
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: absolute;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2 ;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
+section{
+  padding: 5% 10%;
 }
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+.main-home{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://source.unsplash.com/1020x600/?{{user_profile.address}});
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
 }
-.text-box h1{
-    font-size: 62px;
+.main-text h5{
+  color: #EE1C47;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
 }
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
+.main-text h1{
+  color: #000;
+  font-size: 65px;
+  text-transform: capitalize;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 6px 0 10px;
 }
-.hero-button{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff ;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
+.main-text p{
+  color: #333c56;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.main-btn{
+  display: inline-block;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 2px solid #111;
+  padding: 12px 25px;
+  transition: all .42s ease;
+}
+.main-btn:hover{
+  background-color: #000;
+  color: #fff;
+}
+.main-btn i{
+  vertical-align: middle;
+}
+.down-arrow{
+  position: absolute;
+  top: 85%;
+  right: 11%;
+}
+.down i{
+  font-size: 30px;
+  color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  border-radius: 50px;
+  padding: 12px 12px;
+}
+.down i:hover{
+  background-color: #2c2c2c;
+  color: #fff;
+  transition: all .42s ease;
+}
+header.sticky{
+  background: #fff;
+  padding: 20px 10%;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
 
+/* trending-section-css */
+.center-text h2{
+  color: #111;
+  font-size: 28px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 30px;
 }
-
-.hero-button:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-
+.center-text span{
+  color: #EE1C47;
 }
-/* Main Section*/
-
-
-
-
-/* Section Courses */
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
+.products{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  gap: 2rem;
 }
 .row{
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  transition: all .40s;
 }
-.course-col{
-    flex-basis: 31%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
+.row img{
+  width: 100%;
+  height: auto;
+  transition: all .40s;
 }
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
+.row img:hover{
+  transform: scale(0.9);
 }
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+.product-text h5{
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #27b737;
+  padding: 3px 10px;
+  border-radius: 2px;
 }
-@media(max-width: 700px){
-    .row{
-        flex-direction: column;
-    }
+.heart-icon{
+  position: absolute;
+  right: 0;
+  font-size: 20px;
 }
-/* Section Courses */
+.heart-icon:hover{
+  color: #EE1C47;
+}
+.ratting i{
+  color: #FF8C00;
+  font-size: 18px;
+}
+.price h4{
+  color: #111;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.price p{
+  color: #151515;
+  font-size: 14px;
+  font-weight: 600;
+}
+.client-reviews{
+  background-color: #F3F4F6;
+}
+.reviews{
+  text-align: center;
+}
+.reviews h3{
+  color: #111;
+  font-size: 25px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 700;
+}
+.reviews img{
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
+  margin: 10px 0;
+}
+.reviews p{
+  color: #707070;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.reviews h2{
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+/* update-section-css */
+.up-center-text h2{
+  text-align: center;
+  color: #111;
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.cart img{
+  width: 380px;
+  height: auto;
+  border-radius: 5px;
+}
+.update-cart{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, auto));
+  gap: 1rem;
+}
+.cart h5{
+  color: #636872;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.cart h4{
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cart p{
+  color: #707070;
+  font-size: 15px;
+  max-width: 380px;
+  line-height: 25px;
+  margin-bottom: 12px;
+}
+.cart h6{
+  color: #151515;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* contact-section */
+.contact{
+  background-color: #f3f4f6;
+}
+.contact-info{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  gap: 3rem;
+}
+.first-info img{
+  width: 140px;
+  height: auto;
+}
+.contact-info h4{
+  color: #212529;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contact-info p{
+  color: #565656;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .42s;
+}
+.contact-info p:hover{
+  color: #EE1C47;
+}
+.social-icon i{
+  color: #565656;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all .42s;
+}
+.social-icon i:hover{
+  transform: scale(1.3);
+}
+.end-text{
+  background-color: #edfff1;
+  text-align: center;
+  padding: 20px;
+}
+.end-text p{
+  color: #111;
+  text-transform: capitalize;
+}
 
 
-
-
-
-/* Section Campus */
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
+/* Responsive-css */
+@media(max-width:890px){
+  header{
+      padding: 20px 3%;
+      transition: .4s;
+  }
 }
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
+@media(max-width:630px){
+  .main-text h1{
+      font-size: 50px;
+      transition: .4s;
+  }
+  .main-text p{
+      font-size: 18px;
+      transition: .4s;
+  }
+  .main-btn{
+      padding: 10px 20px;
+      transition: .4s;
+  }
 }
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-/* Section Campus */
 
-
-
-
-
-
-/* Section Facilities */
-.facilities{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+@media(max-width:750px){
+  .navmenu{
+      position: absolute;
+      top: 100%;
+      right:-100%;
+      width: 300px;
+      height: 130vh;
+      background: #edfff1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 30px;
+      transition: all .42s;
+  }
+  .navmenu a{
+      display: block;
+      margin: 18px 0;
+  }
+  .navmenu.open{
+      right: 0;
+  }
 }
-.facilities-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilities-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilities-col p{
-    width: 100%;
-    padding: 0;
-}
-.facilities-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-/* Section Facilities */
-
-
-
-
-
-
-/* Section Testimonials */
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #fff3f3 ;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50px;    
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-@media(max-width: 700px){
-    .testimonials-col img{
-        
-        margin-left: 0px;
-        margin-right: 15px;
-    }
-}
-/* Section Testimonials */
-
-
-
-
-
-
-/* Section Call To Action*/
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url( {% static '/images/banner2.jpg' %} );
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin-bottom: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-/* Section Call To Action*/
-
-
-
-
-
-/* Footer */
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-    background: #90a4d1;
-}
-.footer h4{
-    margin-bottom: 25px;
-    font-size: 30px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-.footer p{
-    font-size: 16px;
-    color: black;
-}
-.p-tradeya{
-    padding-top: 2%;
-    padding-bottom: 1%;
-}
-/* Footer */
 
 
 </style>
