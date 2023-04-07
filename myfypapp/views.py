@@ -14,6 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.core.files.storage import default_storage
 
 
 
@@ -33,11 +34,6 @@ def editor(request):
 def main(request):
     return render(request, 'main_page/index.html')
 #rendering template one on click
-
-def template1(request):
-# remember this, this is the main point that wille be used in templates  render
-    user_profile = UserProfile.objects.get(user=request.user)
-    return render(request,'template1.html', {'user_profile': user_profile})
 
 
 def savePage(request):
@@ -169,16 +165,32 @@ def profile_add(request):
         user_profile.phone = request.POST.get('phone')
         user_profile.company_name = request.POST.get('company_name')
         user_profile.email = request.POST.get('email')
-        user_profile.address = request.POST.get('address')
+        user_profile.address=request.POST.get('address')
+        user_profile.category = request.POST.get('category')
         user_profile.save()
-        return redirect('template_view')
+        return redirect('template2')
     # ok so next task is in the place of  redirect profile i'll redirect user to my offered templates page , after selecting one he'll land in the editor with th key value pairs
     else:
         return render(request, 'profile_add.html', {'user_profile': user_profile})
+
+
 @login_required
-def profile_view(request):
-    
+def profile_view(request):    
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request, 'profile_view.html', {'user_profile': user_profile})
+
 def template_view(request):
     return render(request,'templates_view.html')
+
+def editor_demo(request):
+    return render(request,'template1 copy.html')
+
+def template1(request):
+# remember this, this is the main point that wille be used in templates  render
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request,'template1.html', {'user_profile': user_profile})
+
+def template2(request):
+# remember this, this is the main point that wille be used in templates  render
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request,'template2.html', {'user_profile': user_profile})

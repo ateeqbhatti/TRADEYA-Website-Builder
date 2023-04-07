@@ -1,4 +1,3 @@
-
 {% extends "master.html" %}
 
 {% block content %}
@@ -9,6 +8,9 @@
     font-weight: bolder;
     text-align: center;
     margin-top: 50px;
+  }
+  #mylabel{
+    display: inline;
   }
   </style>
   <h1 class="profile_view">Enter Your Company's Information</h1>
@@ -31,9 +33,17 @@
       <input type="email" name="email" id="email" value="{{ user_profile.email }}" class="form-control">
     </div>
     <div class="form-group">
-      <label for="address">Address</label>
+      <label id="mylabel" for="address">Enter Website Category<br> (E.g Shoe, Travel, Blog etc)</label>
       <textarea name="address" id="address" class="form-control">{{ user_profile.address }}</textarea>
     </div>
+
+    {% comment %} <div class="form-group">
+      <label for="logo">Logo</label>
+      <input type="file" name="logo" id="logo" class="form-control-file">
+    </div>
+    {% if user_profile.logo %}
+      <img src="{{ user_profile.logo.url }}" alt="Company Logo">
+    {% endif %} {% endcomment %}
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
 {% endblock %}

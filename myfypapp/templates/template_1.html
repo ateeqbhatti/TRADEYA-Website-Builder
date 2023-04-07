@@ -1,0 +1,251 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/template_1.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    
+
+    <title>Tradeya | Template-1</title>
+</head>
+
+
+<body>
+
+
+    <!-- -------------- Main Section -------------->
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="{% static '/images/logo1.png'%}" alt="image not found!" class="logo"></a>
+
+        <!-- nav bar -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!-- nav bar -->
+
+        <div class="text-box">
+            <h1>Explore Pakistan 
+                <div class="slider">
+                    <div>NOW</div>
+                    <div>TODAY</div>
+                    <div>With Us</div>
+                </div>
+            </h1>
+            <!-- <p style="color: #fff;">Making Website is one of the easiest thing in the world. You just need to learn HTML, <br>CSS & Javascript and you are good to go.</p>
+            <a href="" class="hero-button">Contact Us To Know More</a> -->
+            <p style="color: #fff;">Exploring PAKISTAN became easier with us. You just need to get in touch with us, <br>and we'll take you to each spot you should visit in this country.</p>
+            <a href="" class="hero-button">Contact Us To Know More</a>
+        </div>
+
+    </section>
+
+    <!-- -------------- Main Section -------------->
+
+
+
+
+
+    <!-- -------------- Courses -------------->
+
+    <section class="course">
+
+        <h1>Wide Culture to Experience</h1>
+        <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, suscipit.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Punjabi</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Pakhtoon</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Balochi</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- -------------- Courses -------------->
+    
+    
+    
+    
+    <!-- -------------- Campus -------------->
+ 
+    <section class="campus">
+        <h1>Major Cities</h1>
+        <p class="campus-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate deleniti adipisci labore officiis molestiae.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="{%static '/images/lahore.jpg'%}">
+                <div class="layer">
+                    <h3>Lahore</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{%static '/images/islamabad.jpg'%}">
+                <div class="layer">
+                    <h3>Islamabad</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{%static '/images/karachi.jpg'%}">
+                <div class="layer">
+                    <h3>Karachi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------- Campus -------------->
+    
+
+
+
+    <!-- -------------- Facilities -------------->
+
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="{%static '/images/Pick & Drop.jpg'%}">
+                <h3>Pick & Drop</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="{%static '/images/travell.jpg'%}">
+                <h3>Free Guide</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="{%static '/images/Food.jpg'%}">
+                <h3>Free Food</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------- Facilities -------------->
+
+
+
+
+
+    <!-- -------------- Testimonials ---------------->
+
+        <section class="testimonials">
+            <h1>What Our Clients Say</h1>
+            <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
+
+            <div class="row">
+                <div class="testimonials-col">
+                    <img src="{%static '/images/user1.jpg'%}">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
+                        <h3>Christene Berlin</h3>
+                    </div>
+                </div>
+                <div class="testimonials-col">
+                    <!-- <img src="images/user2.jpg"> -->
+                    <img src="{%static '/images/user2.jpg'%}">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
+                        <h3>David Byer</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    <!-- -------------- Testimonials -------------->
+
+
+
+
+    <!-- -------------- Call To Action -------------->
+
+        <section class="cta">
+            <h1>Get In Touch For Our Various Deals <br> Anywhere From The World </h1>
+            <a href="" class="hero-button">CONTACT US</a>
+        </section>
+
+    <!-- -------------- Call To Action --------------->
+
+    
+
+    <!-- -------------- Call To Action -------------->
+
+        <section class="spacer">
+    
+        </section>
+
+    <!-- -------------- Call To Action -------------->
+
+
+
+
+    <!-- -------------- Footer -------------->
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>   Itaque possimus impedit ad, sit harum quisquam Lorem ipsum dolor.</p>
+            <p class="p-tradeya">Made by TRADEYA</p>
+        </section>
+
+    <!-- -------------- Footer -------------->
+
+    
+
+
+
+
+
+
+
+<!-- JavaScript for toggle Menu -->
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+<!-- JavaScript for toggle Menu -->
+
+</body>
+</html>

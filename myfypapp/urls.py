@@ -6,6 +6,11 @@ from .views import contact
 from django.contrib.auth.decorators import login_required
 from .views import profile_add, profile_view
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
 
 urlpatterns = [
     path('forms/data',views.contact_list, name='contact_list'),
@@ -30,7 +35,13 @@ urlpatterns = [
          template_name='change_password.html', 
          success_url='/password-changed/'), name='password_change'),
     path('password-changed/', views.password_changed, name='password_changed'),
+    path('template2',views.template2,name='template2'),
+    path('template1',views.template1,name='template1'),
+    path('editor_demo',views.editor_demo)
 
 ]
-
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
