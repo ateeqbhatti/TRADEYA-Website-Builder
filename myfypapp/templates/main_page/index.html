@@ -57,6 +57,19 @@
 
         <img src="{% static '/images/Tradeya-NEW.png'%}" alt="image not found!" class="logo">
 
+    
+        <!-- Nav Bar -->
+
+
+    <ul class="navmenu">
+        <li><a href="#">HOME</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">TESTIMONIAL</a></li>
+            <li><a href="#">CONTACT US</a></li>
+    </ul>
+
+
 
         <div class="banner-text">
             <h1>Design your website without diligence</h1>
@@ -255,9 +268,10 @@
 
 
 
-    <!-- Side Nav Bar -->
+    
+    <!-- Side Nav Bar Sliding from right-->
 
-    <div id="side-nav">
+    {% comment %} <div id="side-nav">
         <nav>
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -273,7 +287,7 @@
         <img src="{%static '/images/menu.png'%}" id="menu">
 
 
-    </div>
+    </div> {% endcomment %}
 
 
     <!-- FEATURES -->
@@ -357,7 +371,7 @@
         </div>
         <div class="service-box">
             <div class="single-service">
-                <img src="{%static '/images/Service-001.jpg'%}">
+                <img src="{%static '/images/Service-001.png'%}">
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <a href="template1">
@@ -367,7 +381,7 @@
                 </div>
             </div>
             <div class="single-service">
-                <img src="{% static '/images/page=2.jpg' %}" alt="My image">
+                <img src="{% static '/images/page=2.png' %}" alt="My image">
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <h3>Get Started</h3>
@@ -376,7 +390,7 @@
                 </div>
             </div>
             <div class="single-service">
-                <img src="{% static '/images/page=3.jpg' %}" alt="My image">
+                <img src="{% static '/images/page=3.png' %}" alt="My image">
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <h3>Get Started</h3>
@@ -385,7 +399,7 @@
                 </div>
             </div>
             <div class="single-service">
-                <img src="{%static '/images/page=4.jpg'%}">
+                <img src="{%static '/images/page=4.png'%}">
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <h3>Get Started</h3>
@@ -442,7 +456,7 @@
     </section>
 
 
-    <!-- For side Menu -->
+    {% comment %} <!-- For side Menu -->
 
     <script>
         var menuBtn = document.getElementById("menu-btn")
@@ -459,7 +473,7 @@
                 menu.src = "{%static '/images/menu.png'%}";
             }
         } 
-    </script>
+    </script> {% endcomment %}
 
 
     <!-- Fetching data in email -->

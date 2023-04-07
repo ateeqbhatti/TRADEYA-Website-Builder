@@ -1,12 +1,64 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Choose Template</title>
 </head>
 <body>
-    Hey
+     <!-- -------------- Choosing Template Section ---------------->
+
+     <section id="service">
+        <div class="title-text">
+            <p>Choose Template</p>
+            <h1>Website templates that set you up for success</h1>
+        </div>
+        <div class="service-box">
+            <div class="single-service" href="template1">
+                <img src="{%static '/images/Service-001.jpg'%}">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <a href="template1">
+                        <h3>Get Started</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="{% static '/images/page=2.jpg' %}" alt="My image">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <h3>Get Started</h3>
+          
+                    <p>Customize this template.</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="{% static '/images/page=3.jpg' %}" alt="My image">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <h3>Get Started</h3>
+                  
+                    <p>Customize this template.</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="{%static '/images/page=4.jpg'%}">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <h3>Get Started</h3>
+                  
+                    <p>Customize this template.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<!-- -------------- Choosing Template Section ---------------->
+
 </body>
 </html>
