@@ -1,12 +1,10 @@
-from django.shortcuts import redirect
 from django.views.generic import RedirectView
-from django.shortcuts import render
 from django.http import JsonResponse
 from django.core.serializers import serialize
 import json
 from .models import Pages
-from .forms import ContactForm
-from .models import Contact
+# from .forms import ContactForm
+# from .models import Contact
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
@@ -14,73 +12,61 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from django.core.files.storage import default_storage
-
-
+from .models import UserProfile
 
 
 
 # Create your views here.
-def form_new(request):
-    return render(request,'master_form.html')
-def ateeq(request):
-    return render(request,'ind.html')
 
+# def contact(request):
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             name = form.cleaned_data['name']
+#             email = form.cleaned_data['email']
+#             company_name = form.cleaned_data['company_name']
+#             tagline = form.cleaned_data['tagline']
+#             address = form.cleaned_data['address']
+#             contact = form.cleaned_data['contact']
+#             context = {'name': name, 'email': email,'company_name':company_name,'tagline':tagline,'address':address,'contact':contact}
+#             return render(request, 'main_page/index.html', context)
+#         messages.success(request, 'Your Record has been saved.')
+            
+#     else:
+#         form = ContactForm()
+#     return render(request, 'forms.html', {'form': form})
 
+# def contact_list(request):
+#     contacts = Contact.objects.all()
+#     return render(request, 'client_data.html', {'contacts': contacts})
+# def contact_detail(request, id):
+#     contact = get_object_or_404(Contact, id=id)
+#     return render(request, 'client_datanew.html', {'contact': contact, 'id': id})
+# def contact_update(request, id):
+#     contact = get_object_or_404(Contact, id=id)
+#     form = ContactForm(request.POST or None, instance=contact)
+#     if form.is_valid():
+#         form.save()
+#         messages.success(request, 'Contact Updated successfully')
+#         return redirect(reverse('contact_detail', args=[id]))
+#     return render(request, 'forms.html', {'form': form})
+# def contact_delete(request, id):
+#     contact = get_object_or_404(Contact, id=id)
+#     contact.delete()
+#     return redirect(reverse('contact_list'))
 
+# Editor Builder Display
 def editor(request):
     return render(request,'editor.html')
 
+
+#Homepage
 def main(request):
     return render(request, 'main_page/index.html')
-#rendering template one on click
 
 
-def savePage(request):
-    if(request.method=='POST'):
-        html = request.POST['html']
-        css = request.POST['css']
-        page = Pages.objects.create(name="untitled", html=html, css=css)
-        page.save()
-    return JsonResponse({ "result" : (json.loads(serialize('json', [page])))[0]}) 
-
-def contact(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            company_name = form.cleaned_data['company_name']
-            tagline = form.cleaned_data['tagline']
-            address = form.cleaned_data['address']
-            contact = form.cleaned_data['contact']
-            context = {'name': name, 'email': email,'company_name':company_name,'tagline':tagline,'address':address,'contact':contact}
-            return render(request, 'main_page/index.html', context)
-        messages.success(request, 'Your Record has been saved.')
-            
-    else:
-        form = ContactForm()
-    return render(request, 'forms.html', {'form': form})
-
-def contact_list(request):
-    contacts = Contact.objects.all()
-    return render(request, 'client_data.html', {'contacts': contacts})
-def contact_detail(request, id):
-    contact = get_object_or_404(Contact, id=id)
-    return render(request, 'client_datanew.html', {'contact': contact, 'id': id})
-def contact_update(request, id):
-    contact = get_object_or_404(Contact, id=id)
-    form = ContactForm(request.POST or None, instance=contact)
-    if form.is_valid():
-        form.save()
-        messages.success(request, 'Contact Updated successfully')
-        return redirect(reverse('contact_detail', args=[id]))
-    return render(request, 'forms.html', {'form': form})
-def contact_delete(request, id):
-    contact = get_object_or_404(Contact, id=id)
-    contact.delete()
-    return redirect(reverse('contact_list'))
+# New User Creation
 def signup(request):
     if request.method=='POST':
         #getting post parameteres
@@ -105,7 +91,8 @@ def signup(request):
         
     else:
         return HttpResponse("404 Not Found") 
-    
+
+# User Login Checker whether it exists or not returning to same page  
 def user_login(request):
     if request.method=='POST':
         loginusername=request.POST.get('loginusername')
@@ -119,7 +106,8 @@ def user_login(request):
         else:
             messages.error(request,'Inavlid Credentials')
             return redirect('/')
-        
+  
+# User Login Checker whether it exists or not and returning to Editor Builder page          
 def user_login2(request):
     if request.method=='POST':
         loginusername=request.POST.get('loginusername')
@@ -133,6 +121,8 @@ def user_login2(request):
         else:
             messages.error(request,'Inavlid Credentials')
             return redirect('/')
+        
+# User Login Checker whether it exists or not and returning to User Data gathering for Auto Generation of Template                  
 def user_login3(request):
     if request.method=='POST':
         loginusername=request.POST.get('loginusername')
@@ -147,16 +137,20 @@ def user_login3(request):
             messages.error(request,'Inavlid Credentials')
             return redirect('/') 
         
+        
+#Logging out the user        
 def user_logout(request):
     logout(request)
     messages.success(request,'Successfully Logged out')
     return redirect('/')
+
+#Changing user password        
 def password_changed(request):
     messages.success(request,'Password Changed Successfully')
     return redirect('/')
 
-from .models import UserProfile
 
+# Collecting user's data in order to Auto generate Template 
 @login_required
 def profile_add(request):
     user_profile = UserProfile.objects.get_or_create(user=request.user)[0]
@@ -174,31 +168,40 @@ def profile_add(request):
         return render(request, 'profile_add.html', {'user_profile': user_profile})
 
 
+# Viewing the Data Collected above
 @login_required
 def profile_view(request):    
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request, 'profile_view.html', {'user_profile': user_profile})
 
+
+# Available templates list view
 def template_view(request):
     return render(request,'templates_view.html')
 
-
+# Rendering Auto Generated Template 1 
 def template1(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request,'template1.html', {'user_profile': user_profile})
 
+# Rendering Auto Generated Template 2
 def template2(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request,'template2.html', {'user_profile': user_profile})
 
+# Rendering Auto Generated Template 3
 def template3(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request,'template3.html', {'user_profile': user_profile})
 
+
+# Rendering Auto Generated Template 4
 def template4(request):
 # remember this, this is the main point that wille be used in templates  render
     user_profile = UserProfile.objects.get(user=request.user)
     return render(request,'template4.html', {'user_profile': user_profile})
+
+

@@ -83,7 +83,7 @@
                 {% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
                         {% endfor %}
                 </ul>
                 {% endif %}
@@ -126,7 +126,8 @@
                                             data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Create Account</button>
                                     </div>
-                                    <span class="span2">Already Have an Account<a href="#loginModal" data-bs-toggle="modal">Login</a></span>
+                                    <span class="span2">Already Have an Account<a href="#loginModal"
+                                            data-bs-toggle="modal">Login</a></span>
                                 </form>
                             </div>
                         </div>
@@ -161,7 +162,8 @@
                                         <button type="button" class="btn btn-primary"
                                             data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Login</button>
-                                        <span class="span2">Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
+                                        <span class="span2">Don't Have an Account<a href="#signupModal"
+                                                data-bs-toggle="modal">Create
                                                 One
                                             </a></span>
                                     </div>
@@ -171,21 +173,54 @@
                     </div>
                 </div>
             </div>
-            
- 
 
 
-        <div class="modal fade" id="loginModal2" tabindex="-1" aria-labelledby="loginModalLabel"
-            aria-hidden="true">
+
+
+            <div class="modal fade" id="loginModal2" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title " id="logintitle">Login for TRADEYA!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action='/login2' method='POST'>
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label class="labell" class="col-form-label">Username:</label>
+                                    <input type="text" class="form-control" id="loginusername" name="loginusername"
+                                        required />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="labell" class="col-form-label">Password:</label>
+                                    <input type="password" class="form-control" id="loginpass" name="loginpass"
+                                        required />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                    <span class="span2">Don't Have an Account<a href="#signupModal"
+                                            data-bs-toggle="modal">Create
+                                            One
+                                        </a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="loginModal3" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title " id="logintitle">Login for TRADEYA!</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action='/login2' method='POST'>
+                        <form action='/login3' method='POST'>
                             {% csrf_token %}
                             <div class="mb-3">
                                 <label class="labell" class="col-form-label">Username:</label>
@@ -194,14 +229,13 @@
                             </div>
                             <div class="mb-3">
                                 <label class="labell" class="col-form-label">Password:</label>
-                                <input type="password" class="form-control" id="loginpass" name="loginpass"
-                                    required />
+                                <input type="password" class="form-control" id="loginpass" name="loginpass" required />
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary"
-                                    data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Login</button>
-                                <span class="span2">Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
+                                <span class="span2">Don't Have an Account<a href="#signupModal"
+                                        data-bs-toggle="modal">Create
                                         One
                                     </a></span>
                             </div>
@@ -210,44 +244,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="modal fade" id="loginModal3" tabindex="-1" aria-labelledby="loginModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title " id="logintitle">Login for TRADEYA!</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action='/login3' method='POST'>
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <label class="labell" class="col-form-label">Username:</label>
-                        <input type="text" class="form-control" id="loginusername" name="loginusername"
-                            required />
-                    </div>
-                    <div class="mb-3">
-                        <label class="labell" class="col-form-label">Password:</label>
-                        <input type="password" class="form-control" id="loginpass" name="loginpass"
-                            required />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary"
-                            data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <span class="span2">Don't Have an Account<a href="#signupModal" data-bs-toggle="modal">Create
-                                One
-                            </a></span>
-                    </div>
-                </form>
-            </div>
         </div>
-    </div>
-</div>
-</div>
     </section>
     <div id="form-container">
 
@@ -256,7 +253,7 @@
 
 
 
-    
+
     <!-- Side Nav Bar Sliding from right-->
 
     <div id="side-nav">
@@ -352,119 +349,105 @@
 
     <!-- SERVICES -->
 
-        <section id="service">
-            <div class="title-text">
-                <p>DESIGN IN SECONDS</p>
-                <h1>Website templates that set you up for success</h1>
-            </div>
-            
-            <div class="service-box">
-                <div class="single-service">
-                    <img src="{%static '/images/Service-001.png'%}">
-                    <div class="overlay"></div>
-                    <div class="sevice-description">
-                        <a href="template1" target="_blank">
-                            <h3>Get Started</h3>
-                        </a>
-                        <a href="template1" target="_blank">Customize this template.</a>
-                    </div>
-                </div>
-                <div class="single-service">
-                    <img src="{% static '/images/page=2.png' %}" alt="My image">
-                    <div class="overlay"></div>
-                    <div class="sevice-description">
-                    <a  href="template4" target="_blank" ><h3>Get Started</h3>
-                    </a>
-            
-                    <a href="template4" target="_blank" >  <p >Customize this template.</p></a>
-                    </div>
-                </div>
-                <div class="single-service">
-                    <img src="{% static '/images/page=3.png' %}" alt="My image">
-                    <div class="overlay"></div>
-                    <div class="sevice-description">
-                    <a href="template2" target="_blank" > <h3 href="template3">Get Started</h3></a>
-                    
-                    <a href="template2" target="_blank" >   <p href="template3">Customize this template.</p></a>
-                    </div>
-                </div>
-                <div class="single-service">
-                    <img src="{%static '/images/page=4.png'%}">
-                    <div class="overlay"></div>
-                    <div class="sevice-description">
-                    <a href="template3" target="_blank"> <h3 href="template4">Get Started</h3></a>
-                    
-                    <a href="template3" target="_blank" > <p href="template4">Customize this template.</p></a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    <!-- Contact -->
-
-    {% comment %} <section id="contact">
+    <section id="service">
         <div class="title-text">
-            <p>CONTACT US</p>
-            <h1>LET US GET YOUR QUERY</h1>
-        </div> {% endcomment %}
-        {% comment %} <div class="contact-body">
-            <div> {% endcomment %}
-                {% comment %} <form onsubmit="sendEmail(); reset(); return false;"> {% endcomment %}
-                    {% comment %} <h3>GET IN TOUCH</h3>
-                    <form method="POST">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit">Submit</button> {% endcomment %}
-                        {% comment %}
-                    </form>
-                    <input type="text" id="name" placeholder=" Your Name" required>
-                    <input type="email" id="email" placeholder=" Email ID" required>
-                    <input type="text" id="phone" placeholder=" Contact Number" required>
-                    <textarea id="message" placeholder="How can we help you?" rows="4"></textarea>
-                    <button type="submit">Send</button> {% endcomment %}
-                    {% comment %}
-                </form> {% endcomment %}
-                {% comment %} </div> {% endcomment %}
-            {% comment %}
-        </div> {% endcomment %}
-        {% comment %}
-    </section> {% endcomment %}
+            <p>DESIGN IN SECONDS</p>
+            <h1>Website templates that set you up for success</h1>
+        </div>
+
+        <div class="service-box">
+            <div class="single-service">
+                <img src="{%static '/images/Service-001.png'%}">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <a href="template1" target="_blank">
+                        <h3>Get Started</h3>
+                    </a>
+                    <a href="template1" target="_blank">Customize this template.</a>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="{% static '/images/page=2.png' %}" alt="My image">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <a href="template4" target="_blank">
+                        <h3>Get Started</h3>
+                    </a>
+
+                    <a href="template4" target="_blank">
+                        <p>Customize this template.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="{% static '/images/page=3.png' %}" alt="My image">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <a href="template2" target="_blank">
+                        <h3 href="template3">Get Started</h3>
+                    </a>
+
+                    <a href="template2" target="_blank">
+                        <p href="template3">Customize this template.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="{%static '/images/page=4.png'%}">
+                <div class="overlay"></div>
+                <div class="sevice-description">
+                    <a href="template3" target="_blank">
+                        <h3 href="template4">Get Started</h3>
+                    </a>
+
+                    <a href="template3" target="_blank">
+                        <p href="template4">Customize this template.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <section id="contact">
         <div class="title-text">
             <p>CONTACT US</p>
             <h1>LET US GET YOUR QUERY</h1>
         </div>
         <div class="contact-body">
-            <form method="post" action="{% url 'contact' %}">
+            <form method="post" action="{% url 'profile' %}">
                 {% csrf_token %}
                 <h3>GET IN TOUCH</h3>
                 <h1 class="profile_view">Enter Your Company's Information</h1>
-  <form method="POST">
-    {% csrf_token %}
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" value="{{ user_profile.name }}" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="phone">Phone</label>
-      <input type="text" name="phone" id="phone" value="{{ user_profile.phone }}" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="company_name">Company Name</label>
-      <input type="text" name="company_name" id="company_name" value="{{ user_profile.company_name }}" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" value="{{ user_profile.email }}" class="form-control">
-    </div>
-    <div class="form-group">
-      <label id="mylabel" for="address">Enter Website Category <br> (E.g Shoe, Travel, Blog etc)</label>
-      <textarea name="address" id="address" class="form-control">{{ user_profile.address }}</textarea>
-    </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" value="{{ user_profile.name }}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="phone" value="{{ user_profile.phone }}"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="company_name">Company Name</label>
+                        <input type="text" name="company_name" id="company_name" value="{{ user_profile.company_name }}"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" value="{{ user_profile.email }}"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label id="mylabel" for="address">Enter Website Category <br> (E.g Shoe, Travel, Blog
+                            etc)</label>
+                        <textarea name="address" id="address" class="form-control">{{ user_profile.address }}</textarea>
+                    </div>
 
-                <button type="submit"  >Send</button>
-            </form>
+                    <button type="submit">Send</button>
+                </form>
         </div>
     </section>
 
