@@ -168,7 +168,7 @@ def profile_add(request):
         user_profile.address=request.POST.get('address')
         user_profile.category = request.POST.get('category')
         user_profile.save()
-        return redirect('template2')
+        return redirect('template_view')
     # ok so next task is in the place of  redirect profile i'll redirect user to my offered templates page , after selecting one he'll land in the editor with th key value pairs
     else:
         return render(request, 'profile_add.html', {'user_profile': user_profile})
@@ -182,8 +182,6 @@ def profile_view(request):
 def template_view(request):
     return render(request,'templates_view.html')
 
-def editor_demo(request):
-    return render(request,'template1 copy.html')
 
 def template1(request):
 # remember this, this is the main point that wille be used in templates  render
