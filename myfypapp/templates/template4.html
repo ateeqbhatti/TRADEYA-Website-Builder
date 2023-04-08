@@ -63,219 +63,551 @@
 
 <body>
 
-     
-
-  <header>
-    <!-- <a href="#" class="logo"><img src="image/logo.png" alt=""></a> -->
-    <a href="index.html" class="logo">
-    <h2>  {{ user_profile.company_name }}</h2>
-    </a>
-
-    <ul class="navmenu">
-        <li><a href="#">home</a></li>
-        <li><a href="#">shop</a></li>
-        <li><a href="#">products</a></li>
-        <li><a href="#">page</a></li>
-        <li><a href="#">Docs</a></li>
-    </ul>
-
-    <div class="nav-icon">
-        <a href="#"><i class='bx bx-search'></i></a>
-        <a href="#"><i class='bx bx-user' ></i></a>
-        <a href="#"><i class='bx bx-cart' ></i></a>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </div>
-</header>
-<section class="main-home">
-  <div class="main-text">
-      <h5>Winter Collection</h5>
-      <h1>New Winter <br> Collection 2022</h1>
-      <p>There's Nothing like Trend</p>
-
-      <a href="#" class="main-btn">Shop Now <i class='bx bx-right-arrow-alt' ></i></a>
-  </div>
-
-  <div class="down-arrow">
-      <a href="#trending" class="down"><i class='bx bx-down-arrow-alt' ></i></a>
-  </div>
-</section>
-
-<!-- trending-products-section -->
-<section class="trending-product" id="trending">
-  <div class="center-text">
-      <h2>Our Trending <span>products</span></h2>
-  </div>
+  <div class="all-content">
+    <!-- navbar start -->
 
 
-
-
-
-
-
-
-
-
-
-<!-- -------------- Courses -------------->
-
-<section class="course">
-
-    <h1>Our Services</h1>
-    <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, suscipit.</p>
-
-    <div class="row">
-        <div class="course-col">
-            <h3>Service-1</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
-            </p>
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"id="logo">
+            <h2>  {{ user_profile.company_name }}</h2>
+            </a>
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#product">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallary">Gallary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#blogs">Blogs</a>
+              </li>
+             
+                
+              
+             
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
-        <div class="course-col">
-            <h3>Service-2</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
+      </nav>
+
+    <!-- navbar end -->
+
+
+
+
+
+
+
+
+    <!-- home section start -->
+    <section id="home">
+        <div class="content">
+            <h3>Start Your Day With a <br> Fresh Coffee</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, labore
+                <br>ipsum dolor sit amet consectetur.
             </p>
+            <button id="btn">Shop Now</button>
         </div>
-        <div class="course-col">
-            <h3>Service-3</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ullam, odio, ab molestias qui excepturi reiciendis facere quod sed ea nemo eaque.
-            </p>
-        </div>
-    </div>
-
-
-</section>
-
-<!-- -------------- Courses -------------->
+    </section>
+    <!-- home section end -->
 
 
 
 
-<!-- -------------- About Us -------------->
 
-<section class="campus">
-    <h1>About Us</h1>
-    <p class="campus-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate deleniti adipisci labore officiis molestiae.</p>
 
-    <div class="row">
-        <div class="campus-col">
-            <img src="{%static '/images/about us -1.jpg'%}">
-            <div class="layer">
-                <h3>Click Me</h3>
+
+    <!-- about section start -->
+    <section id="about">
+        <div class="container">
+            <div class="heading">About <span>Us</span></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src=" {% static '/images/about.png' %}"  alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>What Makes Our Coffee Special?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sapiente delectus voluptatum est ipsa, vero quibusdam quos veniam sequi quae Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, est?
+                        <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto voluptatum eligendi nisi consectetur suscipit modi ab, incidunt totam adipisci.
+                        <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto voluptatum eligendi nisi consectetur suscipit modi ab, incidunt totam adipisci.
+                    </p>
+                    <button id="about-btn">Learn More.</button>
+                </div>
             </div>
         </div>
-        <div class="campus-col">
-            <img src="{%static '/images/about us -2.jpg'%}">
-            <div class="layer">
-                <h3>Click Me</h3>
+    </section>
+    <!-- about section end -->
+
+
+
+
+
+
+
+
+    <!-- top card start -->
+    <section id="top-cards">
+      <div class="heading2">Top <span>Categories</span></div>
+      <div class="container">
+        <div class="row">
+
+        
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/c1.png' %} " alt="">
             </div>
-        </div>
-        <div class="campus-col">
-            <img src="{%static '/images/about us -3.jpg'%}">
-            <div class="layer">
-                <h3>Click Me</h3>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/c2.png' %} " alt="">
             </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/c3.png' %} " alt="">
+            </div>
+          </div>
+
         </div>
-    </div>
-</section>
-
-<!-- -------------- About Us -------------->
-
-
-
-
-<!-- -------------- Facilities -------------->
-
-<section class="facilities">
-    <h1>Our Facilities</h1>
-    <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
-
-    <div class="row">
-        <div class="facilities-col">
-            <img src="{%static '/images/Facility-1.jpg'%}">
-            <h3>Facility-1</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
-        </div>
-        <div class="facilities-col">
-            <img src="{%static '/images/Facility-2.jpg'%}">
-            <h3>Facility-2</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
-        </div>
-        <div class="facilities-col">
-            <img src="{%static '/images/Facility-3.jpg'%}">
-            <h3>Facility-3</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis.</p>
-        </div>
-    </div>
-</section>
-
-<!-- -------------- Facilities -------------->
+      </div>
+    </section>
+    <!-- top card end -->
 
 
 
 
 
-<!-- -------------- Testimonials -------------->
 
-    <section class="testimonials">
-        <h1>What Our Clients Say</h1>
-        <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam voluptatem? Mollitia adipisci odit a voluptate at eaque esse!</p>
+
+
+
+
+
+    <!-- menu start -->
+    <section id="menu">
+      <div class="container">
+        <div class="heading3">Menu</div>
+      </div>
+
+      <div class="container" id="container2">
 
         <div class="row">
-            <div class="testimonials-col">
-                <img src="{%static '/images/Shop-user1.jpg'%}">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
-                    <h3>Awais Cheema</h3>
+
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m1.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
                 </div>
+
+                <h3>Coffee</h3>
+                <p>$99 <strike>$100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
             </div>
-            <div class="testimonials-col">
-                <img src="{%static '/images/Shop-user-2.jpg'%}">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat, praesentium vel illum delectus fugiat velit nemo optio inventore sapiente repellat qui repellendus. Voluptates, animi!</p>
-                    <h3>Ateeq Bhatti</h3>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m2.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
                 </div>
+
+                <h3>Coffee</h3>
+                <p>$99 <strike>$110</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
             </div>
-            
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m3.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>Coffee</h3>
+                <p>$100 <strike>$200</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m4.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>Coffee</h3>
+                <p>$120 <strike>$150</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
+
+
+
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m5.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>Coffee</h3>
+                <p>$200 <strike>$300</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m6.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>Coffee</h3>
+                <p>$30 <strike>$50</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m7.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>Coffee</h3>
+                <p>$100 <strike>$200</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src=" {% static '/images/m8.png' %} " alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <h3>Coffee</h3>
+                <p>$130 <strike>$160</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
     </section>
-
-<!-- -------------- Testimonials -------------->
-
+    <!-- menu end -->
 
 
 
-<!-- -------------- Call To Action -------------->
 
-    <section class="cta">
-        <h1>Get In Touch For Our Various Deals <br> Anywhere From The World </h1>
-        <a href="" class="hero-button">CONTACT US</a>
+
+
+
+
+
+
+    <!-- product section start -->
+    <section id="product">
+      <div class="container">
+        <div class="heading4">Products</div>
+      </div>
+
+      <div class="container" id="container3">
+        <div class="row">
+          <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src=" {% static '/images/arabica coffee.png' %} " alt="">
+              <div class="card-body">
+                <h3>Arabic Coffee</h3>
+                <p>$120 <strike>$150</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src=" {% static '/images/Cappuccino coffee.png' %} " alt="">
+              <div class="card-body">
+                <h3>Cappuccino Coffee</h3>
+                <p>$250 <strike>$350</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src=" {% static '/images/Black Coffee.png' %} " alt="">
+              <div class="card-body">
+                <h3>Black Coffee</h3>
+                <p>$130 <strike>$200</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src=" {% static '/images/Decaf caffee.png' %} " alt="">
+              <div class="card-body">
+                <h3>Decaf Coffee</h3>
+                <p>$100 <strike>$120</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-<!-- -------------- Call To Action -------------->
-
+    <!-- product section end -->
 
 
-<!-- -------------- Call To Action -------------->
 
-    <section class="spacer">
 
+
+
+
+
+
+    <!-- our gallary start -->
+    <div class="container" id="gallary">
+      <div class="heading5"> Our <span>Gallary</span></div>
+
+      <div class="row" style="margin-top: 30px;">
+      
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src=" {% static '/images/image1.png' %} " alt="">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src=" {% static '/images/image2.png' %} " alt="">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src=" {% static '/images/image3.png' %} " alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+      
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src=" {% static '/images/image4.png' %} " alt="">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src=" {% static '/images/image5.png' %} " alt="">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src=" {% static '/images/image6.png' %} " alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- our gallary end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- contact start -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-7">
+            <div class="heading6">Contact <span>Us</span></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, sapiente
+              <br>ipsum dolor sit amet consectetur.
+            </p>
+            <input type="text" class="form-control" placeholder="Name" aria-label="default input example"><br>
+            <input type="email" class="form-control" placeholder="Email" aria-label="default input example"><br>
+            <input type="number" class="form-control" placeholder="Phone" aria-label="default input example"><br>
+            <button id="contact-btn">Send Message</button>
+          </div>
+
+          <div class="col-md-5" id="col">
+            <h1>Info</h1>
+            <p><i class="fa-regular fa-envelope"></i>example@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+92000000000000000</p>
+            <p><i class="fa-solid fa-building-columns"></i>Karachi Sindh Pakistan</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita temporibus culpa error ea praesentium.</p>
+          </div>
+
+        </div>
+      </div>
     </section>
-
-<!-- -------------- Call To Action -------------->
-
+    <!-- contact end -->
 
 
 
-<!-- -------------- Footer -------------->
 
-    <section class="footer">
-        <h4>About Us</h4>
-        <p class="campus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>   Itaque possimus impedit ad, sit harum quisquam Lorem ipsum dolor.</p>
-        <p class="p-tradeya">Made by TRADEYA</p>
+
+
+
+
+
+
+
+    <!-- blogs start -->
+    <section id="blogs">
+      <div class="heading7">Latest <span>Blogs</span></div>
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src=" {% static '/images/b1.png' %} " alt="">
+              <div class="card-body">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h5>Admin / 6 March 2020</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam sed quod, hic unde tempore cum! Qui necessitatibus ipsum nemo!</p>
+                <button id="blog-btn">Read More.</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src=" {% static '/images/b2.png' %} " alt="">
+              <div class="card-body">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h5>Admin / 6 March 2020</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam sed quod, hic unde tempore cum! Qui necessitatibus ipsum nemo!</p>
+                <button id="blog-btn">Read More.</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src=" {% static '/images/b3.png' %} " alt="">
+              <div class="card-body">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h5>Admin / 6 March 2020</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam sed quod, hic unde tempore cum! Qui necessitatibus ipsum nemo!</p>
+                <button id="blog-btn">Read More.</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
     </section>
-
-<!-- -------------- Footer ------------->
-
+    <!-- blogs end -->
 
 
 
@@ -284,596 +616,530 @@
 
 
 
-      <!-- JavaScript for toggle Menu -->
+    <!-- footer start -->
+    <footer id="footer">
+      <div class="footer-logo text-center"><img src=" {% static '/images/logoo.png' %} " alt=""></div>
+      <div class="socail-links text-center">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
 
-      <script>
+      <div class="credits text-center">
+        Dseigned By <a href="#"> <span>SA Coding</span></a>
+      </div>
 
-        var navLinks = document.getElementById("navLinks");
+      <div class="copyright text-center">
+        &copy; Copyright <strong> <span>Coffee Shop</span></strong>. All Rights reserved
+      </div>
 
-        function showMenu() {
-          navLinks.style.right = "0";
-        }
 
-        function hideMenu() {
-          navLinks.style.right = "-200px";
-        }
+    </footer>
+    <!-- footer end -->
 
-      </script>
-      <!-- JavaScript for toggle Menu -->
+
+
+
+    <a href="#" class="arrow"><i><img src=" {% static ' /images/up-arrow.png' %}" alt="" width="50px"></i></a>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
       <style>
         .clearfix {
           clear: both
         }
 
-        .main{
+        .all-content{
+          background: #f7f5f2;
+      }
+      html ::-webkit-scrollbar-track{
+          background: transparent;
+      }
+      html ::-webkit-scrollbar-thumb{
+          background: #b2744c;
+          border-radius: 10px;
+      }
+      html ::-webkit-scrollbar{
+          width: 10px;
+      }
+      
+      /* navbar start */
+      #navbar{
+          background-color: #b2744c;
+      }
+      #logo img{
+          border-radius: 10px;
+          width: 160px;
+          margin-left: 40px;
+      }
+      .navbar-nav{
+          margin-left: 50px;
+      }
+      .nav-item .nav-link{
+          color: black;
+          margin-left: 10px;
+          font-weight: bold;
+          transition: 0.5s;
+      }
+      .nav-item .nav-link:hover{
+          background: #f7f5f2;
+          border-radius: 5px;
+          color: black;
+      }
+      #navbar form button{
+          background: black;
+          color: white;
+          border: 1px solid white;
+      }
+      /* navbar end */
+      
+      
+      
+      
+      
+      /* home section start */
+      #home{
           width: 100%;
-          background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../Background-template-4.jpg);
-          background-position: center;
+          height: 90vh;
+          background-image: url(https://source.unsplash.com/1020x600/?{{user_profile.address}});
+          background-repeat: no-repeat;
           background-size: cover;
+          background-position: 88%;
+      }
+      #home .content{
+          padding-top: 210px;
+          margin-left: 56px;
+      }
+      #home .content h3{
+          font-size: 50px;
+          color: white;
+      }
+      #home .content p{
+          margin-top: 10px;
+          color: white;
+      }
+      #btn{
+          width: 150px;
+          height: 36px;
+          margin-top: 20px;
+          background: white;
+          border-radius: 5px;
+          font-weight: bold;
+          border: none;
+          transition: 0.5s ease;
+          cursor: pointer;
+      }
+      #btn:hover{
+          background: #b2744c;
+          color: white;
+      }
+      /* home section end */
+      
+      
+      
+      
+      
+      
+      
+      
+      /* about section start */
+      #about{
+          width: 100%;
           height: 100vh;
       }
-      
-      .navbar{
-          width: 1200px;
-          height: 75px;
-          margin: auto;
-      }
-      
-      .icon{
-          width: 200px;
-          float: left;
-          height: 70px;
-      }
-      
-      .logo{
-          color:white;
-          font-size: 35px;
-          font-family: Arial;
-          padding-left: 20px;
-          float: left;
-          padding-top: 10px;
-          margin-top: 5px
-      }
-      
-      .menu{
-          width: 400px;
-          float: left;
-          height: 70px;
-      }
-      
-      ul{
-          float: left;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-      
-      ul li{
-          list-style: none;
-          margin-left: 62px;
-          margin-top: 27px;
-          font-size: 14px;
-      }
-      
-      ul li a{
-          text-decoration: none;
-          color: #fff;
-          font-family: Arial;
-          font-weight: bold;
-          transition: 0.4s ease-in-out;
-      }
-      
-      ul li a:hover{
-          color: #494c28;
-      }
-      
-      .search{
-          width: 330px;
-          float: left;
-          margin-left: 270px;
-      }
-      
-      .srch{
-          font-family: 'Times New Roman';
-          width: 200px;
-          height: 40px;
-          background: transparent;
-          border: 1px solid #fff;
-          margin-top: 13px;
-          color: #fff;
-          border-right: none;
-          font-size: 16px;
-          float: left;
-          padding: 10px;
-          border-bottom-left-radius: 5px;
-          border-top-left-radius: 5px;
-      }
-      
-      .btn{
-          width: 100px;
-          height: 40px;
-          background: #fff;
-          border: 2px solid #fff;
-          margin-top: 13px;
-          color: #494c28;
-          font-size: 15px;
-          border-bottom-right-radius: 5px;
-          border-bottom-right-radius: 5px;
-          transition: 0.2s ease;
-          cursor: pointer;
-      }
-      .btn:hover{
-          color: #fff;
-          background: #494c28;
-      }
-      
-      .btn:focus{
-          outline: none;
-      }
-      
-      .srch:focus{
-          outline: none;
-      }
-      
-      .content{
-          width: 1200px;
-          height: auto;
-          margin: auto;
-          color: #fff;
-          position: relative;
-      }
-      
-      .content .par{
-          padding-left: 20px;
-          padding-bottom: 25px;
-          font-family: Arial;
-          letter-spacing: 1.2px;
-          line-height: 30px;
-      }
-      
-      .content h1{
-          font-family: 'Times New Roman';
-          font-size: 50px;
-          padding-left: 20px;
-          margin-top: 9%;
-          letter-spacing: 2px;
-          color: #fff;
-      }
-      
-      .content .cn{
-          width: 160px;
-          height: 40px;
-          background: #494c28;
-          border: none;
-          margin-bottom: 10px;
-          margin-left: 20px;
-          font-size: 18px;
-          border-radius: 10px;
-          cursor: pointer;
-          transition: .4s ease;
-          
-      }
-      
-      .content .cn a{
-          text-decoration: none;
-          color: #fff;
-          transition: .3s ease;
-      }
-      
-      .cn:hover{
-          background-color: #fff;
-      }
-      
-      .content span{
-          color: #494c28;
-          font-size: 65px
-      }
-      
-      .form{
-          width: 250px;
-          height: 405px;
-          background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-          position: absolute;
-          top: -20px;
-          left: 870px;
-          transform: translate(0%,-5%);
-          border-radius: 10px;
-          padding: 25px;
-      }
-      
-      .form h2{
-          width: 220px;
-          font-family: sans-serif;
-          text-align: center;
-          color: #494c28;
-          font-size: 22px;
-          background-color: #fff;
-          border-radius: 10px;
-          margin: 2px;
-          padding: 8px;
-      }
-      
-      .form input{
-          width: 240px;
-          height: 35px;
-          background: transparent;
-          border-bottom: 1px solid #a3a37f;
-          border-top: none;
-          border-right: none;
-          border-left: none;
-          color: #fff;
-          font-size: 15px;
-          letter-spacing: 1px;
-          margin-top: 30px;
-          font-family: sans-serif;
-      }
-      
-      .form input:focus{
-          outline: none;
-      }
-      
-      ::placeholder{
-          color: #fff;
-          font-family: Arial;
-      }
-      
-      .btnn{
-          width: 240px;
-          height: 40px;
-          background: #494c28;
-          border: none;
-          margin-top: 30px;
-          font-size: 18px;
-          border-radius: 10px;
-          cursor: pointer;
-          color: #fff;
-          transition: 0.4s ease;
-      }
-      .btnn:hover{
-          background: #fff;
-          color: #a3a37f
-      }
-      .btnn a{
-          text-decoration: none;
-          color: #fff;
-          font-weight: bold;
-      }
-      .form .link{
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 17px;
-          padding-top: 20px;
-          text-align: center;
-          color: #fff;
-      }
-      .form .link a{
-          text-decoration: none;
-          color: #a3a37f;
-      }
-      .liw{
-          padding-top: 15px;
-          padding-bottom: 10px;
-          text-align: center;
-          color: #fff;
-      }
-      .icons a{
-          text-decoration: none;
-          color: #fff;
-      }
-      .icons ion-icon{
-          color: #fff;
-          font-size: 30px;
-          padding-left: 14px;
-          padding-top: 5px;
-          transition: 0.3s ease;
-      }
-      .icons ion-icon:hover{
-          color: #494c28;
-      }
-      
-      /* ------------------ Main Page ------------------  */
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      /* ------------------ Other Pages ------------------  */
-      
-      
-      /* Section Courses */
-      .course{
-          width: 100%;
-          margin: auto;
-          text-align: center;
-          padding-top: 100px;
-          padding-bottom: 10px;
-          background: #000;
-          
-      }
-      h1{
-          font-size: 36px;
-          font-weight: 600;
-          color: #494c28;
-      }
-      p{
-          color: #777;
-          font-size: 14px;
-          font-weight: 300;
-          line-height: 22px;
-          padding: 10px;
-          color:#000 ;
-      }
-      .row{
-          margin-top: 5%;
-          margin-bottom: 5% ;
-          margin-left: 10%;
-          margin-right: 10%;
-          display: flex;
-          justify-content: space-between;
-      }
-      .course-col{
-          flex-basis: 31%;
-          background:#ffc107;
-          border-radius: 10px;
-          margin-bottom: 5%;
-          padding: 20px 12px;
-          box-sizing: border-box;
-          transition: 0.5s;
-      }
-      h3{
-          text-align: center;
-          font-weight: 600;
-          margin: 10px 0;
-      }
-      .course-col:hover{
-          box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-      }
-      @media(max-width: 700px){
-          .row{
-              flex-direction: column;
-          }
-      }
-      /* Section Courses */
-      
-      
-      
-      
-      
-      /* Section About Us */
-      .campus{
-          width: 100%;
-          margin: auto;
-          text-align: center;
-          background: #000;
+      #about .container{
           padding-top: 70px;
-          padding-bottom: 10px;
       }
-      .campus-p{
-          color: #777;
-      }
-      .campus-col{
-          flex-basis: 32%;
-          border-radius: 10px;
-          margin-bottom: 30px;
-          position: relative;
-          overflow: hidden;
-      }
-      .campus-col img{
-          width: 100%;
-          height: 100%;
-          display: block;
-      }
-      .layer{
-          background: transparent;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: 0.5s;
-      }
-      .layer:hover{
-          background: rgba(255, 217, 0, 0.651);
-      }
-      .layer h3{
-          width: 100%;
-          font-weight: 500;
-          color: #000;
-          font-size: 26px;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          position: absolute;
-          opacity: 0;
-          transition: 0.5s;
-      }
-      .layer:hover h3{
-          bottom: 49%;
-          opacity: 1;
-      }
-      /* Section About Us */
-      
-      
-      
-      
-      
-      
-      /* Section Facilities */
-      .facilities{
-          width: 100%;
-          margin: auto;
+      .heading{
           text-align: center;
-          padding-top: 70px;
-          padding-bottom: 10px;
-          background: #000;
-      
-      }
-      .facilities-col{
-          flex-basis: 31%;
-          border-radius: 10px;
-          margin-bottom: 5%;
-          text-align: left;
-      }
-      .facilities-col img{
-          width: 100%;
-          border-radius: 10px;
-      }
-      .facilities-col p{
-          width: 100%;
-          padding: 0;
-          color: #777;
-      }
-      .facilities-col h3{
-          margin-top: 16px;
-          margin-bottom: 15px;
-          text-align: left;
-          color: #fff;
-      }
-      /* Section Facilities */
-      
-      
-      
-      
-      
-      
-      /* Section Testimonials */
-      .testimonials{
-          width: 100%;
-          padding-top: 70px;
-          padding-bottom: 10px;
-          text-align: center;
-          background: #000;
-      }
-      .testimonials-col{
-          flex-basis: 44%;
-          border-radius: 10px;
-          margin-bottom: 5%;
-          text-align: left;
-          background: #ffc107 ;
-          padding: 25px;
-          cursor: pointer;
-          display: flex;
-      }
-      .testimonials-col img{
-          height: 40px;
-          margin-left: 5px;
-          margin-right: 30px;
-          border-radius: 50px;    
-      }
-      .testimonials-col p{
-          padding: 0;
-      }
-      .testimonials-col h3{
-          margin-top: 15px;
-          text-align: left;
-      }
-      @media(max-width: 700px){
-          .testimonials-col img{
-              
-              margin-left: 0px;
-              margin-right: 15px;
-          }
-      }
-      /* Section Testimonials */
-      
-      
-      
-      
-      
-      
-      /* Section Call To Action*/
-      .cta{
-          
-          width: 100%;
-          background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/banner3.jpg);
-          background-position: center;
-          background-size: cover;
-          text-align: center;
-          padding-top: 100px;
-          padding-bottom: 70px;
-      
-      }
-      .cta h1{
-          color: #fff;
-          margin-bottom: 40px;
-          padding: 0;
-      }
-      .hero-button{
-          padding: 15px 25px;
-          margin: 20px;
-          font-size: 16px;
-          letter-spacing: 1px;
-          color: #fff;
-          border: 2px solid #ffc107 ;
-          cursor: pointer;
-          background: linear-gradient(to right, transparent 50%, #ffc107 50%);
-          background-size: 200%;
-          background-position: left;
-          text-decoration: none;
-          transition: background-position 0.5s;
-          display: inline-block;
-          position: relative;
-      }
-      
-      .hero-button:hover{
-          color: #000;
-          background-position: right;
-      }
-      
-      @media(max-width: 700px){
-          .cta h1{
-              font-size: 24px;
-          }
-      }
-      /* Section Call To Action*/
-      
-      
-      
-      
-      /* Spacer */
-      .spacer{
-          width: 100%;
-          padding-top: 70px;
-          padding-bottom: 100px;
-          background: #000;
-      }
-      
-      /* Spacer */
-      
-      
-      
-      
-      
-      
-      /* Footer */
-      .footer{
-          width: 100%;
-          text-align: center;
-          padding-top: 5px;
-          padding-bottom: 5px;
-          background: #ffc107;
-      }
-      .footer h4{
-          padding-top: 25px;
-          font-size: 30px;
-          font-weight: 600;
-      }
-      .footer p{
-          font-size: 16px;
+          margin-bottom: 50px;
           color: black;
-          padding-left: 15%;
-          padding-right: 15%;
+          font-size: 30px;
+          font-weight: bold;
       }
-      .p-tradeya{
-          padding-top: 1%;
-          padding-bottom: 1%;
+      .heading span{
+          color: #b2744c;
       }
-      /* Footer */
+      #about .card{
+          border-radius: 10px;
+      }
+      #about .card img{
+          border-radius: 10px;
+      }
+      #about-btn{
+          width: 200px;
+          height: 36px;
+          background: transparent;
+          border: 2px solid #b2744c;
+          color: #b2744c;
+          border-radius: 5px;
+          font-weight: bold;
+          transition: 0.5s;
+          cursor: pointer;
+      }
+      #about-btn:hover{
+          background-color: #b2744c;
+          color: white;
+      }
+      @media screen and (max-width:982px){
+          #about p{
+              font-size: 8px;
+          }
+      }
+      @media screen and (max-width:766px){
+          #about p{
+              font-size: 15px;
+          }
+          #about{
+              height: 120vh;
+          }
+      }
+      /* about section end */
+      
+      
+      
+      
+      
+      
+      
+      
+      /* top cards start */
+      #top-cards{
+          width: 100%;
+          /* height: 60vh; */
+          background: #f7f5f2;
+      }
+      .heading2{
+          color: black;
+          text-align: center;
+          font-size: 30px;
+          font-weight: bold;
+      }
+      .heading2 span{
+          color: #b2744c;
+      }
+      #top-cards .container{
+          margin-top: 30px;
+      }
+      #top-cards .card{
+          border-radius: 10px;
+          transition: 0.5s;
+          cursor: pointer;
+      }
+      #top-cards .card img{
+          border-radius: 10px;
+      }
+      #top-cards .card:hover{
+          transform: translateY(-10px);
+      }
+      /* top cards end */
+      
+      
+      
+      
+      
+      
+      
+      
+      /* menu start */
+      #menu{
+          width: 100%;
+          margin-top: 60px;
+      }
+      .heading3{
+          text-align: center;
+          font-size: 30px;
+          color: #b2744c;
+          font-weight: bold;
+          border-bottom: 2px solid #b2744c;
+      }
+      #container2{
+          margin-top: 50px;
+      }
+      #menu .card{
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      .star i{
+          color: #b2744c;
+      }
+      #menu h3{
+          text-align: center;
+          color: #b2744c;
+          margin-top: 10px;
+          font-size: 25px;
+      }
+      #menu p{
+          font-size: 16px;
+          color: #b2744c;
+          padding-top: 10px;
+      }
+      #menu p span{
+          float: right;
+          cursor: pointer;
+      }
+      /* menu end */
+      
+      
+      
+      
+      
+      
+      
+      /* product section start */
+      #product{
+          width: 100%;
+      }
+      .heading4{
+          text-align: center;
+          color: #b2744c;
+          font-size: 30px;
+          padding-top: 100px;
+          font-weight: bold;
+          border-bottom: 2px solid #b2744c;
+      }
+      #container3{
+          margin-top: 30px;
+      }
+      #product h3{
+          text-align: center;
+          color: #b2744c;
+          font-size: 23px;
+      }
+      #product p{
+          color: #b2744c;
+          padding-top: 10px;
+      }
+      #product p span{
+          float: right;
+          cursor: pointer;
+      }
+      /* product section end */
+      
+      
+      
+      
+      
+      
+      
+      
+      /* our gallary start */
+      #gallary{
+          width: 100%;
+      }
+      .heading5{
+          text-align: center;
+          color: black;
+          margin-top: 60px;
+          font-size: 30px;
+          font-weight: bold;
+      }
+      #gallary .heading5 span{
+          color: #b2744c;
+      }
+      #gallary .card{
+          border-radius: 10px;
+          cursor: pointer;
+      }
+      #gallary .card img{
+          border-radius: 10px;
+      }
+      /* our gallary end */
+      
+      
+      
+      
+      
+      
+      
+      
+      /* contact start */
+      #contact{
+          width: 100%;
+          height: 100vh;
+          padding-top: 70px;
+      }
+      #contact .container{
+          width: 100%;
+          height: 80vh;
+          background: linear-gradient(90deg, white 80%, #b2744c 20%);
+          border-radius: 10px;
+      }
+      .heading6{
+          font-size: 30px;
+          font-weight: bold;
+          margin-top: 70px;
+      }
+      .heading6 span{
+          color: #b2744c;
+      }
+      #contact p{
+          font-weight: bold;
+          font-size: 13px;
+          color: black;
+      }
+      #contact input{
+          width: 360px;
+          border: none;
+          border-bottom: 1px solid #b2744c;
+      }
+      #contact-btn{
+          width: 200px;
+          height: 36px;
+          border: none;
+          background: #b2744c;
+          color: white;
+          font-weight: bold;
+          margin-top: 30px;
+          cursor: pointer;
+      }
+      #col{
+          width: 40%;
+          height: 56vh;
+          background: black;
+          margin-top: 78px;
+      }
+      #contact h1{
+          color: white;
+          font-size: 25px;
+          margin-top: 10px;
+          margin-left: 10px;
+      }
+      #contact #col p{
+          font-size: 15px;
+          color: white;
+          margin-left: 13px;
+          margin-top: 30px;
+      }
+      @media screen and (max-width:766px){
+          #contact .container{
+              background: white;
+          }
+          #col{
+              width: 100%;
+              background: #b2744c;
+          }
+          #contact{
+              height: 150vh;
+          }
+      }
+      @media screen and (max-width:400px){
+          #contact input{
+              width: 250px;
+          }
+      }
+      /* contact end */
+      
+      
+      
+      
+      
+      /* blogs start */
+      #blogs{
+          width: 100%;
+      }
+      #blogs .heading7{
+          text-align: center;
+          font-size: 30px;
+          color: black;
+          font-weight: bold;
+      }
+      #blogs .heading7 span{
+          color: #b2744c;
+      }
+      #blogs .container{
+          margin-top: 60px;
+      }
+      #blogs h5{
+          color: #b2744c;
+      }
+      #blog-btn{
+          width: 200px;
+          height: 36px;
+          border: none;
+          color: white;
+          background: #b2744c;
+          cursor: pointer;
+      }
+      /* blogs end */
+      
+      
+      
+      
+      
+      
+      /* footer start */
+      #footer{
+          width: 100%;
+          background: #b2744c;
+          margin-top: 50px;
+      }
+      .footer-logo img{
+          width: 180px;
+          border-radius: 10px;
+          margin-top: 30px;
+          cursor: pointer;
+      }
+      .socail-links i{
+          font-size: 17px;
+          margin-left: 10px;
+          margin-top: 30px;
+          padding: 10px;
+          background: black;
+          color: white;
+          border-radius: 10px;
+          cursor: pointer;
+      }
+      .credits{
+          color: white;
+          margin-top: 20px;
+          text-shadow: 0px 0px 1px black;
+      }
+      .credits a{
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+      }
+      #credits a span{
+          color: black;
+      }
+      .copyright span{
+          color: black;
+      }
+      /* footer end */
+      html{
+          scroll-behavior: smooth;
+      }
+      .arrow{
+          position: fixed;
+          height: 50px;
+          bottom: 40px;
+          right: 50px;
+          text-align: center;
+          line-height: 50px;
+      }
       
  
       

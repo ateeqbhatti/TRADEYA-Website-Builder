@@ -7,9 +7,13 @@ from django.contrib.auth.decorators import login_required
 from .views import profile_add, profile_view
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import handler404
+
+handler404 = 'myfypapp.views.error_404_view'
 
 
 urlpatterns = [
+    
     #Rendering Editor Builder
     path('editor', views.editor, name='editor'),
     
@@ -21,11 +25,11 @@ urlpatterns = [
     
     #Rendering Login Functions
     path('login', views.user_login, name='login'),
-    path('login2', views.user_login2, name='login'),
-    path('login3', views.user_login3, name='login'),
+    path('login2', views.user_login2, name='login2'),
+    path('login3', views.user_login3, name='login3'),
     
     #Rendering Logout Function
-    path('logout', views.user_logout, name='login'),
+    path('logout', views.user_logout, name='logout'),
     
     #Rendering Profile Data Function
     path('profile/add/', profile_add, name='profile_add'),
@@ -47,6 +51,7 @@ urlpatterns = [
     path('template3', views.template3, name='template3'),
     path('template1', views.template1, name='template1'),
     path('template4', views.template4, name='template4'),
+    path('chatbot',views.chatbot, name='chatbot')
 
 ]
 if settings.DEBUG:
