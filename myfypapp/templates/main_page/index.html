@@ -35,7 +35,7 @@
 
 
     <!-- Home -->
-    <div class="dropdown login_user">
+    <div class="dropdown login_user" id="drop-down-right">
         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hey {{request.user}}!
         </button>
@@ -49,13 +49,13 @@
         <div>
 
             <video id="background-video" autoplay loop muted>
-                <source src="{%static '/images/Web Design-2.mp4'%}" type="video/mp4">
+                <source src="{%static '/images/BG-video.mp4'%}" type="video/mp4">
             </video>
         </div>
 
 
 
-        <img src="{% static '/images/Tradeya-NEW.png'%}" alt="image not found!" class="logo">
+        <img src="{% static '/images/Tradeya-2.png'%}" alt="image not found!" class="logo">
 
 
 
@@ -259,17 +259,16 @@
     <div id="side-nav">
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">TESTIMONIAL</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#banner">HOME</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li><a href="#service">TEMPLATES</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
             </ul>
         </nav>
     </div>
 
     <div id="menu-btn">
-        <img src="{%static '/images/menu.png'%}" id="menu">
+        <img src="{%static '/images/menu-3.png'%}" id="menu">
 
 
     </div>
@@ -367,7 +366,7 @@
                 </div>
             </div>
             <div class="single-service">
-                <img src="{% static '/images/page=2.png' %}" alt="My image">
+                <img src="{% static '/images/page=21.jpg' %}" alt="My image">
                 <div class="overlay"></div>
                 <div class="sevice-description">
                     <a href="template4" target="_blank">
@@ -409,8 +408,9 @@
 
     </section>
 
+    <!-- contact -->
     <section id="contact">
-        <div class="title-text">
+        <div class="title-text-contact title-text">
             <p>CONTACT US</p>
             <h1>LET US GET YOUR QUERY</h1>
         </div>
@@ -462,11 +462,11 @@
         menuBtn.onclick = function () {
             if (sideNav.style.right == "-250px") {
                 sideNav.style.right = "0";
-                menu.src = "{%static '/images/close.png'%}";
+                menu.src = "{%static '/images/close-2.png'%}";
             }
             else {
                 sideNav.style.right = "-250px";
-                menu.src = "{%static '/images/menu.png'%}";
+                menu.src = "{%static '/images/menu-3.png'%}";
             }
         } 
     </script>
@@ -497,9 +497,9 @@
 
 
     <!-- Footer -->
-    <footer class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
-                class="hover:underline">Tradeya™</a>. All Rights Reserved.
+    <footer style="background-color:#f2f2f2 " class="p-4 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+        <span  class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#"
+                >Tradeya™</a>. All Rights Reserved.
         </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
