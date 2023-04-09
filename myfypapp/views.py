@@ -2,6 +2,7 @@ from django.views.generic import RedirectView
 from django.http import JsonResponse
 from django.core.serializers import serialize
 import json
+from . import views
 from .models import Pages
 # from .forms import ContactForm
 # from .models import Contact
@@ -34,10 +35,15 @@ def chatbot(request):
             # stop='.'
             temperature=0.5
         )
-        print(response)
         chatbot_response=response["choices"][0]["text"]
+        print(chatbot_response)
         
-    return render(request, 'bot.html', {'response': chatbot_response})
+        
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+
+        return HttpResponse(chatbot_response)
+    else:
+        return render(request, 'editor.html', {'response': chatbot_response})
 
 
 
@@ -85,7 +91,12 @@ def chatbot(request):
 
 # Editor Builder Display
 def editor(request):
-    return render(request,'editor.html')
+    if request.method == 'POST':
+        # Call chatbot view to get response
+        chatbot_response = views.chatbot(request)
+        return render(request, 'editor.html', {'response': chatbot_response})
+    else:
+        return render(request, 'editor.html')
 
 
 #Homepage
