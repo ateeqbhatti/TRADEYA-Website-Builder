@@ -18,12 +18,26 @@
     height: 100vh;
 }
 
+
+
 .logo {
-    width: 400px;
+    width: 320px;
     height: 140 px;
     position: absolute;
-    top: -15%;
+    top: -8%;
     left: 0%;
+}
+
+#drop-down-right{
+    
+    margin-top: 3.7%;
+    position: fixed;
+}
+
+#drop-down-right:hover{
+    color:#f2f2f2;
+    background: #009688;
+    font-weight: bold;
 }
 
 
@@ -65,13 +79,16 @@
 }
 
 .banner-btn a {
-    width: 150px;
+    width: 220px;
     text-decoration: none;
     display: inline-block;
     margin: 0 10px;
     padding: 12px 0;
     color: white;
-    border: .5px solid white;
+    border: .5px #f2f2f2;
+    font-weight: bold;
+    letter-spacing:1mm ;
+    border-style: solid;
 }
 
 .banner-btn a:hover {
@@ -107,15 +124,16 @@ nav ul li a {
     color: white;
 } 
 
+
 #menu-btn {
     width: 50px;
     height: 50px;
     padding-left: 14.5px;
-    background: #009688;
+    background: #f2f2f2;
     text-align: center;
     position: fixed;
     right: 70px;
-    top: 35px;
+    top: 50px;
     border-radius: 3px;
     z-index: 3;
     cursor: pointer;
@@ -143,7 +161,13 @@ nav ul li a {
 .title-text {
     text-align: center;
     padding-bottom: 70px;
+    
 }
+
+.title-text-contact{
+    color: #efefef !important;
+}
+
 
 .title-text p {
     margin: auto;
@@ -153,6 +177,7 @@ nav ul li a {
     position: relative;
     z-index: 1;
     display: inline-block;
+    
 }
 
 .title-text p::after {
@@ -173,6 +198,7 @@ nav ul li a {
     font-size: 50px;
     padding-left: 90px;
     padding-right: 90px;
+    
 }
 
 .feature-box {
@@ -334,12 +360,18 @@ form {
     padding: 2vw 4vw;
     border-radius: 10px;
     opacity: 100%;
+    width: 60%;
+}
+
+form h3 {
+    font-size: 20px;
 }
 
 form h1 {
     color: #009688;
     font-weight: 800;
     margin-bottom: 20px;
+    font-size: 30px;
 }
 
 .title-text {
@@ -394,7 +426,7 @@ form button:hover {
     margin-top: 35px;
     border-radius: 6px;
     color: white;
-    background-color: #009688;
+    background-color: #f2f2f2;
     padding: 6px 10px 6px 10px;
     position: absolute !important;
 
@@ -435,4 +467,9 @@ span a{
 .loginbtn a{
     text-decoration: underline;
     color:black;
+}
+
+
+footer{
+    background: #009688;
 }
