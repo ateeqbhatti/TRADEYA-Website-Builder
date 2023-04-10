@@ -360,7 +360,7 @@ form {
     padding: 2vw 4vw;
     border-radius: 10px;
     opacity: 100%;
-    width: 60%;
+    /* width: 60%; */
 }
 
 form h3 {
@@ -468,6 +468,7 @@ span a{
     text-decoration: underline;
     color:black;
 }
+
 
 
 footer{
