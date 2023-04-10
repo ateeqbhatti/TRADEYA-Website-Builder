@@ -1,4 +1,4 @@
-{% extends 'master.html' %}
+{% extends 'editor.html' %}
 
 {% block content  %}
 {% load static %}
@@ -38,7 +38,7 @@
 </style>
 
 <div id="chat-button">
-    <img src="{% static '/images/Tradeya-NEW.png'%}" alt="Chat">
+ 
   </div>
   
   <div id="chat-window">
@@ -52,13 +52,14 @@
 
 </form>
 
-{% if response %}
-  <div>
+  {% if response %}
+    <div>
 
-    {{ response|safe }}
-  </div>
-{% endif %}
-  </div>
+      {{ response }}
+
+    </div>
+  {% endif %}
+</div>
   
 <script>
 

@@ -1062,18 +1062,21 @@ deviceManager: {
   } 
 
 </script>
-{% comment %} 
 <style>
+  {% load static %}
   #chat-button {
+      
+    box-shadow: 2px 2px 2px 2px #888888;
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      right: 210px;
       width: 60px;
       height: 60px;
-      background-color: #007bff;
+      background-color: #009688;
       border-radius: 30px;
       text-align: center;
       cursor: pointer;
+      z-index:9999;
     }
     
     #chat-button img {
@@ -1083,6 +1086,7 @@ deviceManager: {
     }
     
     #chat-window {
+      padding:20px;
       position: fixed;
       bottom: 100px;
       right: 20px;
@@ -1093,28 +1097,46 @@ deviceManager: {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       z-index: 9999;
       display: none;
+      overflow:scroll;
+
+    }
+    #chat_now{
+      padding-top:20px;
+      font-weight: bolder;
+
     }
     
-
+#chat-heading{
+  font-weight:bolder;
+  text-align:Center;
+  margin-bottom:10px;
+}
+div#response{
+  padding-left:30x;
+  text0-align:center;
+}
+#chat-btn{
+  background-color:#009688 !important;
+}
 </style>
 
 <div id="chat-button">
-  <img src='/images/Tradeya-NEW.png' alt="Chat">
+  <h1 id="chat_now">Chat</h1>
 </div>
 
 <div id="chat-window">
-  <h1>Write instruction</h1>
-<form method="post" action="">
+  <h1 id="chat-heading" >Write instruction</h1>
+  <form method="post" action="{% url 'chatbot' %}">
 {% csrf_token %}
 
 <input type="text" class="form-control " name="user_input">
-<button type="submit" class="btn btn-primary mt-3">submit</button>
+<button id="chat-btn" type="submit" class="btn btn-primary mt-3">submit</button>
 
 
 </form>
 
 {% if response %}
-<div>
+<div id="response">
 
   {{ response|safe }}
 </div>
@@ -1136,8 +1158,10 @@ deviceManager: {
   });
   
 
-</script> {% endcomment %}
+</script>
 
 
 
 {% endblock content %}
+
+
